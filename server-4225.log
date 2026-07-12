@@ -1,0 +1,139 @@
+127.0.0.1 - - [11/Jun/2026 15:06:42] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 15:06:59] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 15:06:59] "GET /strategy.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 15:06:59] "GET /academy.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 15:06:59] "GET /investor-center.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 15:06:59] "GET /documents.html HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 17:41:20] "GET /index.html?v=hero-animation HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 23:33:57] "GET /index.html?v=access-link HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 23:39:55] "GET /index.html?v=footer-clean HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 23:46:23] "GET /index.html?v=icon-audit HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 23:51:48] "GET /index.html?v=button-clean HTTP/1.1" 200 -
+127.0.0.1 - - [11/Jun/2026 23:52:29] "GET /index.html?v=buttons-no-arrows HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:48:41] "GET /assets/hampton-crest-academy-logo.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:49:37] "GET /index.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:49:37] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:49:37] "GET /assets/hampton-crest-academy-logo.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:44] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:45] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:45] "GET /assets/hampton-crest-logo-transparent-ivory.png HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:45] "GET /script.js HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:45] "GET /assets/hampton-hero-globe.png HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:45] "GET /assets/hampton-crest-academy-logo.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /index.html?v=final HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /strategy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /index.html?v=hero-animation HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /investor-center.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /documents.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /academy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /index.html?v=footer-clean HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:46] "GET /index.html?v=access-link HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:51:51] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:57:23] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:57:23] "GET /academy.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 10:57:23] "GET /assets/hampton-crest-academy-logo.jpg?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:53] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:53] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /academy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /academy.html?v=academy-logo HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /documents.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /investor-center.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /strategy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /index.html?v=final HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /index.html?v=access-link HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:54] "GET /index.html?v=hero-animation HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /academy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html?v=final HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /strategy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /investor-center.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html?v=footer-clean HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html?v=hero-animation HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /index.html?v=access-link HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:05:55] "GET /documents.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:06:15] "GET /assets/hampton-crest-academy-logo.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:10:04] "GET /index.html?v=academy-fit HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:10:04] "GET /academy.html?v=academy-fit HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 65070)
+Traceback (most recent call last):
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 1422, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 732, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 484, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "C:\Python314\Lib\http\server.py", line 739, in do_GET
+    self.copyfile(f, self.wfile)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\http\server.py", line 942, in copyfile
+    shutil.copyfileobj(source, outputfile)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 256, in copyfileobj
+    while buf := fsrc_read(length):
+                 ~~~~~~~~~^^^^^^^^
+MemoryError
+----------------------------------------
+127.0.0.1 - - [12/Jun/2026 11:10:07] "GET /assets/hampton-crest-academy-logo-tight.jpg?v=academy-fit HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:25:58] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:25:58] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:25:58] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:43:23] "GET /index.html?v=academy-logo-2 HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:43:23] "GET /styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:43:24] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:46:53] "GET /index.html?v=academy-logo-2 HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 11:46:53] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 11:46:53] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 12:02:04] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 12:02:04] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 12:02:04] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 12:02:04] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 13:25:01] "GET /index.html?v=academy-logo-2 HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 13:25:01] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 13:25:01] "GET /assets/hampton-crest-logo-transparent-ivory.png HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 13:25:01] "GET /script.js HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 13:25:01] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 14:04:06] "GET /index.html?v=academy-logo-2 HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:04:06] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:04:06] "GET /assets/hampton-crest-academy-logo-tight.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html?v=final HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /academy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /investor-center.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html?v=access-link HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /strategy.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /documents.html HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html?v=footer-clean HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html?v=icon-audit HTTP/1.1" 200 -
+127.0.0.1 - - [12/Jun/2026 14:40:07] "GET /index.html?v=hero-animation HTTP/1.1" 200 -
