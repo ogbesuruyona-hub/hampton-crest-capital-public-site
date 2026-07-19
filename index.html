@@ -14,17 +14,16 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://hamptoncrestcapital.com/" />
-    <meta property="og:image" content="https://hamptoncrestcapital.com/assets/hampton-hero-globe.png" />
+    <meta property="og:image" content="https://hamptoncrestcapital.com/assets/hampton-hero-globe-optimized.jpg" />
     <meta property="og:image:alt" content="Hampton Crest Capital institutional abstract visual" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <title>Hampton Crest Capital | Private Investment Firm</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="canonical" href="https://hamptoncrestcapital.com/" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -38,10 +37,9 @@
         </a>
 
         <nav class="desktop-nav" aria-label="Navegación principal">
-          <a href="index.html">Home</a>
           <a href="strategy.html">Estrategia</a>
           <a href="academy.html">Hampton Crest Academy</a>
-<a href="documents.html">Información Institucional</a>
+          <a href="documents.html">Información Institucional</a>
           <a href="https://investorhamptoncrest.com" target="_blank" rel="noopener noreferrer" title="Área privada para inversionistas" aria-label="Acceder: área privada para inversionistas">Acceder</a>
         </nav>
 
@@ -53,10 +51,9 @@
 
       <div class="mobile-menu" id="mobile-menu">
         <nav aria-label="Navegación móvil">
-          <a href="index.html">Home</a>
           <a href="strategy.html">Estrategia</a>
           <a href="academy.html">Hampton Crest Academy</a>
-<a href="documents.html">Información Institucional</a>
+          <a href="documents.html">Información Institucional</a>
           <a class="portal-button" href="https://investorhamptoncrest.com" target="_blank" rel="noopener noreferrer" title="Área privada para inversionistas" aria-label="Acceder: área privada para inversionistas">Acceder</a>
         </nav>
       </div>
@@ -98,18 +95,31 @@
       </section>
 
       <section class="investor section" id="inversor">
-        <div class="container investor-free-card">
-          <div>
+        <div class="container investor-access-panel">
+          <div class="investor-access-copy">
             <div class="eyebrow"><span></span>Área gratuita</div>
             <h2>Centro del<br /><em>Inversor.</em></h2>
             <p>
               Área gratuita de educación financiera, recursos básicos y contenido introductorio
               para quienes desean aprender antes de invertir.
             </p>
+            <div class="access-highlights" aria-label="Contenido disponible">
+              <span>Educación gratuita</span>
+              <span>Biblioteca financiera</span>
+              <span>Análisis introductorio</span>
+            </div>
           </div>
-          <div class="investor-card-actions">
-            <a class="button button-gold" href="centro-del-inversor/index.html">Entrar al Centro del Inversor</a>
-            <a class="button tool-button" href="centro-del-inversor/index.html#/auth?mode=login" title="Academia gratuita del Centro del Inversor" aria-label="Acceder a la academia gratuita del Centro del Inversor">Ya estoy registrado</a>
+          <div class="investor-access-grid" aria-label="Accesos del Centro del Inversor">
+            <a class="investor-access-card investor-access-card-primary" href="centro-del-inversor/index.html">
+              <span class="access-card-label">Acceso gratuito</span>
+              <strong>Entrar al Centro del Inversor</strong>
+              <small>Explore educación financiera, recursos básicos y materiales introductorios.</small>
+            </a>
+            <a class="investor-access-card investor-access-card-light" href="centro-del-inversor/index.html#/auth?mode=login" title="Academia gratuita del Centro del Inversor" aria-label="Acceder a la academia gratuita del Centro del Inversor">
+              <span class="access-card-label">Usuarios registrados</span>
+              <strong>Ya estoy registrado</strong>
+              <small>Continúe a su academia gratuita y a su historial educativo.</small>
+            </a>
           </div>
         </div>
       </section>

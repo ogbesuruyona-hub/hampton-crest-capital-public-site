@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" role="img" aria-labelledby="title desc">
+  <title id="title">Hampton Crest Academy</title>
+  <desc id="desc">Gold shield academy logo for Hampton Crest Academy.</desc>
+  <defs>
+    <linearGradient id="academyGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3D38A"/>
+      <stop offset="0.48" stop-color="#D9A441"/>
+      <stop offset="1" stop-color="#A8741D"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="url(#academyGold)" d="M72 18l48 16v42c0 33-18 58-48 76-30-18-48-43-48-76V34l48-16z"/>
+    <path fill="#071426" d="M72 30l36 12v33c0 25-12 45-36 61-24-16-36-36-36-61V42l36-12z"/>
+    <path fill="url(#academyGold)" d="M72 43l23 8v22H78V58H66v15H49V51l23-8zm-25 41h50v10H47V84zm7 18h36v10H54v-10z"/>
+    <text x="150" y="75" fill="#F3D38A" font-family="Georgia, 'Times New Roman', serif" font-size="32" letter-spacing="1">HAMPTON CREST</text>
+    <text x="151" y="113" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="5">ACADEMY</text>
+    <path stroke="#D9A441" stroke-width="2" d="M151 127h208"/>
+  </g>
+</svg>
