@@ -101,6 +101,8 @@ main { min-height: 70vh; }
 .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,15,25,.94) 0%, rgba(4,15,25,.72) 48%, rgba(4,15,25,.18) 100%), linear-gradient(0deg, rgba(4,15,25,.7), transparent 45%); }
 .hero-content { position: relative; z-index: 1; max-width: 720px; }
 .hero h1 { margin: 15px 0 22px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(3.15rem, 12vw, 6.8rem); font-weight: 400; line-height: .96; letter-spacing: 0; }
+.hero-statement span { display: block; }
+.hero-statement span + span { margin-top: .18em; color: var(--gold-light); }
 .hero p { max-width: 580px; margin: 0 0 30px; color: #d5dde0; font-size: 1rem; line-height: 1.7; }
 .page-hero { padding: 132px 0 58px; color: white; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,.12); }
 .page-hero h1 { max-width: 850px; margin: 13px 0 15px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 11vw, 5.7rem); font-weight: 400; line-height: 1; letter-spacing: 0; }

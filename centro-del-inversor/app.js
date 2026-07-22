@@ -693,7 +693,7 @@ const Pages = {
     <div class="page">
       <section class="hero"><div class="container hero-content">
         <span class="eyebrow">Patrimonio · Disciplina · Visión</span>
-        <h1>Inversiones con propósito, resultados con disciplina.</h1>
+        <h1 class="hero-statement"><span>Inversiones con propósito.</span><span>Resultados con disciplina.</span></h1>
         <p>Hampton Crest Capital ofrece formación institucional y herramientas de análisis para inversionistas que buscan construir patrimonio con criterio y rigor.</p>
         <div class="button-row">${Components.Button({ label: "Acceso gratuito", href: "/analisis" })}${Components.Button({ label: "Explorar Academia", href: "/academia", variant: "secondary" })}</div>
       </div></section>
