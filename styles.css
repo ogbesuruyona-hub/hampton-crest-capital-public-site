@@ -543,6 +543,97 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
     linear-gradient(148deg, transparent 0 65%, rgba(216,189,120,.07) 66%, transparent 67%),
     repeating-linear-gradient(0deg, transparent 0 58px, rgba(6,19,33,.014) 59px 60px);
 }
+.investment-principles .principle-card {
+  min-height: 355px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 152px clamp(34px, 4vw, 48px) 42px;
+  border: 1px solid rgba(19,32,42,.12);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.96), rgba(246,242,234,.92)),
+    var(--paper);
+  box-shadow: 0 22px 60px rgba(7,22,35,.075);
+}
+.investment-principles .principle-card::before {
+  inset: 0 0 auto;
+  height: 112px;
+  z-index: 1;
+  border-bottom: 1px solid rgba(216,189,120,.24);
+  background:
+    radial-gradient(circle at 16% 24%, rgba(216,189,120,.18), transparent 0 25%),
+    linear-gradient(135deg, rgba(216,189,120,.16), transparent 28%),
+    linear-gradient(120deg, rgba(8,27,43,.98), rgba(3,16,28,.98));
+}
+.investment-principles .principle-card::after {
+  inset: 112px 0 0;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  opacity: 1;
+}
+.investment-principles .card-number {
+  display: none;
+}
+.investment-principles .icon-wrap {
+  top: 30px;
+  left: clamp(34px, 4vw, 48px);
+  width: 62px;
+  height: 62px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e8cf86, #b9852d);
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+.investment-principles .icon-wrap svg {
+  width: 30px;
+  stroke-width: 1.35;
+}
+.investment-principles .principle-card h3 {
+  max-width: 420px;
+  margin: 0 0 16px;
+  color: var(--navy);
+}
+.investment-principles .principle-card h3::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  margin-top: 18px;
+  background: var(--gold);
+}
+.investment-principles .principle-card p {
+  max-width: 430px;
+  color: rgba(83,97,106,.86);
+}
+.investment-principles .visual-shield::after {
+  background:
+    radial-gradient(circle at 80% 55%, transparent 0 26%, rgba(6,19,33,.026) 27% 28%, transparent 29%),
+    linear-gradient(145deg, transparent 0 67%, rgba(216,189,120,.042) 68%, transparent 69%),
+    radial-gradient(ellipse at 82% 70%, rgba(6,19,33,.022), transparent 38%);
+}
+.investment-principles .visual-data::after {
+  background:
+    linear-gradient(rgba(6,19,33,.035), rgba(6,19,33,.035)) 72% 80% / 24px 78px no-repeat,
+    linear-gradient(rgba(6,19,33,.03), rgba(6,19,33,.03)) 82% 80% / 24px 114px no-repeat,
+    linear-gradient(rgba(6,19,33,.025), rgba(6,19,33,.025)) 91% 80% / 24px 66px no-repeat,
+    linear-gradient(145deg, transparent 0 68%, rgba(216,189,120,.05) 69%, transparent 70%);
+}
+.investment-principles .visual-horizon::after {
+  background:
+    linear-gradient(150deg, transparent 0 62%, rgba(216,189,120,.062) 63%, transparent 64%),
+    radial-gradient(ellipse at 58% 92%, rgba(6,19,33,.03), transparent 36%),
+    radial-gradient(ellipse at 30% 82%, rgba(216,189,120,.045), transparent 34%);
+}
+.investment-principles .visual-risk::after {
+  background:
+    radial-gradient(circle at 82% 54%, transparent 0 24%, rgba(6,19,33,.034) 25% 25.8%, transparent 26.5%),
+    radial-gradient(circle at 82% 54%, transparent 0 40%, rgba(6,19,33,.028) 41% 41.8%, transparent 42.5%),
+    linear-gradient(34deg, transparent 0 64%, rgba(6,19,33,.035) 65%, transparent 66%),
+    linear-gradient(150deg, transparent 0 68%, rgba(216,189,120,.055) 69%, transparent 70%);
+}
 .investment-cta {
   display: flex;
   justify-content: center;
@@ -2086,6 +2177,33 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   .investment-principles .principle-card h3 {
     margin-top: auto;
     font-size: clamp(24px, 8vw, 32px);
+  }
+  .investment-principles .principle-card {
+    min-height: 318px;
+    padding: 132px 28px 32px;
+    border-radius: 14px;
+  }
+  .investment-principles .principle-card::before {
+    height: 96px;
+  }
+  .investment-principles .principle-card::after {
+    inset: 96px 0 0;
+  }
+  .investment-principles .icon-wrap {
+    top: 24px;
+    left: 28px;
+    width: 54px;
+    height: 54px;
+  }
+  .investment-principles .icon-wrap svg {
+    width: 26px;
+  }
+  .investment-principles .principle-card h3 {
+    margin: 0 0 13px;
+    line-height: 1.12;
+  }
+  .investment-principles .principle-card h3::after {
+    margin-top: 14px;
   }
   .investor-tools { grid-template-columns: 1fr; margin-top: 48px; }
   .tool-card { min-height: 390px; padding: 30px; }
