@@ -443,6 +443,106 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
 .investment-principles .principle-card p {
   max-width: 290px;
 }
+.investment-principles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.investment-principles .principle-card {
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(36px, 4vw, 54px);
+  border: 1px solid rgba(19,32,42,.14);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.94), rgba(246,242,234,.86)),
+    var(--paper);
+}
+.investment-principles .principle-card::before {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(250,248,243,.18), rgba(250,248,243,.78) 74%),
+    linear-gradient(90deg, rgba(250,248,243,.96) 0%, rgba(250,248,243,.84) 52%, rgba(250,248,243,.48) 100%);
+}
+.investment-principles .principle-card::after,
+.strategy-philosophy-grid .strategy-principle-card::after {
+  inset: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.investment-principles .icon-wrap,
+.strategy-principle-card .icon-wrap {
+  position: absolute;
+  top: 42px;
+  left: 42px;
+  z-index: 2;
+  background: rgba(250,248,243,.52);
+  backdrop-filter: blur(5px);
+}
+.investment-principles .card-number,
+.strategy-principle-card .card-number {
+  top: 30px;
+  right: 32px;
+  color: rgba(118,85,27,.72);
+  letter-spacing: .08em;
+}
+.investment-principles .principle-card h3 {
+  max-width: 420px;
+  margin: auto 0 16px;
+  font: 650 clamp(25px, 3vw, 34px)/1.14 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+.investment-principles .principle-card p {
+  max-width: 430px;
+  color: rgba(83,97,106,.86);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.investment-principles .visual-shield::after,
+.strategy-philosophy-grid .visual-shield::after {
+  background:
+    radial-gradient(circle at 72% 42%, rgba(255,255,255,.42), transparent 0 28%, rgba(216,189,120,.08) 29%, transparent 42%),
+    linear-gradient(90deg, transparent 0 51%, rgba(6,19,33,.08) 52%, transparent 53%),
+    linear-gradient(rgba(216,189,120,.24), rgba(216,189,120,.24)) 72% 45% / 105px 2px no-repeat,
+    radial-gradient(circle at 72% 46%, transparent 0 29%, rgba(6,19,33,.075) 30% 32%, transparent 33%),
+    linear-gradient(145deg, transparent 0 58%, rgba(216,189,120,.11) 59%, transparent 60%),
+    linear-gradient(145deg, rgba(6,19,33,.055), rgba(216,189,120,.10));
+  clip-path: none;
+}
+.investment-principles .visual-data::after,
+.strategy-philosophy-grid .visual-data::after {
+  background:
+    linear-gradient(180deg, transparent 0 54%, rgba(6,19,33,.07) 55% 100%),
+    linear-gradient(rgba(6,19,33,.11), rgba(6,19,33,.11)) 66% 74% / 40px 150px no-repeat,
+    linear-gradient(rgba(6,19,33,.08), rgba(6,19,33,.08)) 76% 74% / 40px 210px no-repeat,
+    linear-gradient(rgba(6,19,33,.07), rgba(6,19,33,.07)) 86% 74% / 40px 128px no-repeat,
+    linear-gradient(140deg, transparent 0 56%, rgba(216,189,120,.15) 57%, transparent 58%),
+    repeating-linear-gradient(0deg, transparent 0 38px, rgba(6,19,33,.045) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 48px, rgba(6,19,33,.035) 49px 50px);
+}
+.investment-principles .visual-horizon::after,
+.strategy-philosophy-grid .visual-horizon::after {
+  background:
+    radial-gradient(circle at 80% 26%, rgba(216,189,120,.22), transparent 0 8%, transparent 9%),
+    linear-gradient(150deg, transparent 0 48%, rgba(255,255,255,.58) 49%, rgba(216,189,120,.18) 50%, transparent 51%),
+    radial-gradient(ellipse at 55% 88%, rgba(6,19,33,.08), transparent 0 34%),
+    radial-gradient(ellipse at 26% 78%, rgba(216,189,120,.13), transparent 0 32%),
+    linear-gradient(180deg, rgba(216,189,120,.08), transparent 56%),
+    repeating-linear-gradient(90deg, transparent 0 54px, rgba(6,19,33,.035) 55px 56px);
+}
+.investment-principles .visual-risk::after,
+.strategy-philosophy-grid .visual-risk::after {
+  background:
+    radial-gradient(circle at 76% 55%, transparent 0 21%, rgba(6,19,33,.085) 22% 23%, transparent 24%),
+    radial-gradient(circle at 76% 55%, transparent 0 38%, rgba(6,19,33,.075) 39% 40%, transparent 41%),
+    conic-gradient(from 34deg at 76% 55%, rgba(216,189,120,.16), transparent 0 17%, rgba(6,19,33,.075) 18%, transparent 24% 100%),
+    linear-gradient(32deg, transparent 0 55%, rgba(6,19,33,.10) 56%, transparent 57%),
+    linear-gradient(148deg, transparent 0 60%, rgba(216,189,120,.14) 61%, transparent 62%),
+    repeating-linear-gradient(0deg, transparent 0 38px, rgba(6,19,33,.035) 39px 40px);
+}
 .investment-cta {
   display: flex;
   justify-content: center;
@@ -1727,6 +1827,50 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
 .strategy-principle-card:hover { transform: translateY(-7px); border-color: rgba(198,169,106,.55); box-shadow: 0 30px 70px rgba(7,22,35,.12); }
 .strategy-principle-card h3 { margin: 48px 0 13px; color: var(--navy); font: 600 20px/1.25 "Manrope"; }
 .strategy-principle-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.strategy-philosophy-grid .strategy-principle-card {
+  min-height: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 38px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.95), rgba(246,242,234,.82)),
+    var(--paper);
+}
+.strategy-philosophy-grid .strategy-principle-card::before {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(250,248,243,.18), rgba(250,248,243,.82) 76%),
+    linear-gradient(90deg, rgba(250,248,243,.95), rgba(250,248,243,.66));
+}
+.strategy-philosophy-grid .strategy-principle-card h3 {
+  max-width: 310px;
+  margin: auto 0 13px;
+  font: 650 24px/1.15 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+.strategy-philosophy-grid .strategy-principle-card p {
+  max-width: 320px;
+  color: rgba(83,97,106,.86);
+  font-size: 13px;
+}
+.strategy-philosophy-grid .visual-discipline::after {
+  background:
+    linear-gradient(rgba(216,189,120,.18), rgba(216,189,120,.18)) 72% 26% / 84px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.08), rgba(6,19,33,.08)) 72% 42% / 128px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.06), rgba(6,19,33,.06)) 72% 58% / 112px 1px no-repeat,
+    radial-gradient(circle at 76% 46%, rgba(216,189,120,.12), transparent 0 28%),
+    repeating-linear-gradient(0deg, transparent 0 34px, rgba(6,19,33,.035) 35px 36px),
+    repeating-linear-gradient(90deg, transparent 0 52px, rgba(6,19,33,.035) 53px 54px);
+}
+.strategy-philosophy-grid .visual-compound::after {
+  background:
+    radial-gradient(circle at 32% 72%, rgba(6,19,33,.10) 0 4px, transparent 5px),
+    radial-gradient(circle at 55% 53%, rgba(216,189,120,.18) 0 6px, transparent 7px),
+    radial-gradient(circle at 78% 27%, rgba(216,189,120,.26) 0 8px, transparent 9px),
+    linear-gradient(150deg, transparent 0 50%, rgba(216,189,120,.18) 51%, transparent 52%),
+    radial-gradient(circle at 74% 44%, transparent 0 40%, rgba(6,19,33,.055) 41%, transparent 42%);
+}
 
 .strategy-application { color: #fff; background: var(--navy); }
 .strategy-process { margin-top: 78px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.02); }
@@ -1871,7 +2015,25 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   .heading-copy .lead { font-size: 17px; }
   .principles { grid-template-columns: 1fr; margin-top: 52px; }
   .principle-card { min-height: 245px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .investment-principles .principle-card {
+    min-height: 310px;
+    padding: 30px;
+  }
+  .investment-principles .icon-wrap,
+  .strategy-principle-card .icon-wrap {
+    top: 30px;
+    left: 30px;
+  }
+  .investment-principles .card-number,
+  .strategy-principle-card .card-number {
+    top: 24px;
+    right: 26px;
+  }
   .principle-card h3 { margin-top: 36px; }
+  .investment-principles .principle-card h3 {
+    margin-top: auto;
+    font-size: clamp(24px, 8vw, 32px);
+  }
   .investor-tools { grid-template-columns: 1fr; margin-top: 48px; }
   .tool-card { min-height: 390px; padding: 30px; }
   .tool-card .button { width: 100%; }
@@ -2052,6 +2214,10 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   .resource-note { text-align: left; }
   .document-actions { display: grid; grid-template-columns: 1fr; }
   .strategy-principle-card { min-height: 245px; }
+  .strategy-philosophy-grid .strategy-principle-card {
+    min-height: 305px;
+    padding: 30px;
+  }
   .strategy-process { margin-top: 48px; }
   .process-block { padding: 28px 20px; }
   .process-divider { margin: 0 20px; }
