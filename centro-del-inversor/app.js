@@ -5,9 +5,32 @@ const bookCategories = ["Investing", "Personal Finance", "Economics", "Stock Mar
 const APP_BASE = "/centro-del-inversor";
 const root = document.getElementById("root");
 
+async function loadRuntimeEnv() {
+  const existing = window.HCC_ENV || {};
+  if (existing.SUPABASE_URL && existing.SUPABASE_ANON_KEY) return existing;
+
+  try {
+    const response = await fetch("/api/public-config", {
+      cache: "no-store",
+      headers: { Accept: "application/json" }
+    });
+    if (!response.ok) throw new Error("Public config unavailable");
+    const runtimeEnv = await response.json();
+    window.HCC_ENV = {
+      ...existing,
+      ...runtimeEnv,
+      PUBLIC_APP_URL: runtimeEnv.PUBLIC_APP_URL || existing.PUBLIC_APP_URL || ""
+    };
+    return window.HCC_ENV;
+  } catch (error) {
+    console.warn("Public configuration could not be loaded.");
+    return existing;
+  }
+}
+
 const DataStore = {
   async createContactRequest(payload) {
-    if (!AuthProvider.client) throw new Error("Supabase no está configurado.");
+    if (!AuthProvider.client) throw new Error("El acceso privado no está disponible en este momento.");
     const { error } = await AuthProvider.client.from("contact_requests").insert({ ...payload, status: "new" });
     if (error) throw error;
   },
@@ -403,7 +426,7 @@ const DataStore = {
   },
 
   async updateContactStatus(id, status) {
-    if (!AuthProvider.client) throw new Error("Supabase no está configurado.");
+    if (!AuthProvider.client) throw new Error("El acceso privado no está disponible en este momento.");
     const { error } = await AuthProvider.client
       .from("contact_requests")
       .update({ status })
@@ -428,11 +451,11 @@ const AuthProvider = {
     }
     if (this.client || this.error) return;
     this.initializing = true;
-    const env = window.HCC_ENV || {};
+    const env = await loadRuntimeEnv();
     this.configured = Boolean(env.SUPABASE_URL && env.SUPABASE_ANON_KEY);
     if (!this.configured) {
       this.ready = true;
-      this.error = "Supabase no está configurado. Defina SUPABASE_URL y SUPABASE_ANON_KEY en el entorno del servidor.";
+      this.error = "El acceso privado del Centro del Inversor está temporalmente en configuración. Para asistencia, contacte a Hampton Crest Capital.";
       this.initializing = false;
       return;
     }
@@ -456,7 +479,7 @@ const AuthProvider = {
         renderRoute();
       });
     } catch (error) {
-      this.error = "No se pudo inicializar Supabase Auth. Revise las variables públicas del entorno.";
+      this.error = "No pudimos iniciar el acceso privado en este momento. Intente nuevamente más tarde o contacte a Hampton Crest Capital.";
       console.error(error);
     } finally {
       this.ready = true;
@@ -805,6 +828,7 @@ const Pages = {
 
   Auth: () => {
     const mode = authMode();
+    const authUnavailable = Boolean(AuthProvider.error && !AuthProvider.client);
     if (AuthProvider.user) {
       return `<div class="page"><section class="gate"><div class="container gate-card"><div class="gate-brand">${Components.Logo()}</div><span class="eyebrow">Sesión activa</span><h1>Ya inició sesión</h1><p>Puede continuar al Centro de Análisis o cerrar sesión desde el menú de usuario.</p><div class="button-row">${Components.Button({ label: "Ir al análisis", href: "/analisis" })}</div></div></section></div>`;
     }
@@ -817,12 +841,14 @@ const Pages = {
           <h1>${mode === "reset" ? "Recuperar acceso" : "Su Centro del Inversor"}</h1>
           <p>${mode === "reset" ? "Ingrese su correo para recibir instrucciones de restablecimiento." : "Acceda a herramientas educativas y a su historial personal de investigación."}</p>
           ${AuthProvider.error ? `<div class="status-message error">${escapeHtml(AuthProvider.error)}</div>` : ""}
-          <div class="auth-tabs">
-            <a href="/auth?mode=login" data-link class="${mode === "login" ? "active" : ""}">Iniciar sesión</a>
-            <a href="/auth?mode=register" data-link class="${mode === "register" ? "active" : ""}">Crear cuenta</a>
-            <a href="/auth?mode=reset" data-link class="${mode === "reset" ? "active" : ""}">Restablecer</a>
-          </div>
-          ${authForm(mode)}
+          ${authUnavailable ? authUnavailableState() : `
+            <div class="auth-tabs">
+              <a href="/auth?mode=login" data-link class="${mode === "login" ? "active" : ""}">Iniciar sesión</a>
+              <a href="/auth?mode=register" data-link class="${mode === "register" ? "active" : ""}">Crear cuenta</a>
+              <a href="/auth?mode=reset" data-link class="${mode === "reset" ? "active" : ""}">Restablecer</a>
+            </div>
+            ${authForm(mode)}
+          `}
         </div>
       </div>`;
   },
@@ -856,6 +882,17 @@ function adminNav() {
     <a class="filter-button" href="/admin/libros" data-link>Libros</a>
     <a class="filter-button" href="/admin/usuarios" data-link>Usuarios</a>
   </nav>`;
+}
+
+function authUnavailableState() {
+  return `<div class="auth-unavailable">
+    <h2>Acceso en preparación</h2>
+    <p>Estamos finalizando la conexión segura del Centro del Inversor. Si ya tiene acceso o necesita asistencia, contacte directamente a Hampton Crest Capital.</p>
+    <div class="auth-support-actions">
+      <a class="button button-ink button-wide" href="mailto:hamptoncrestcapital@gmail.com">Contactar soporte</a>
+      <a class="button button-outline button-wide" href="/contacto" data-link>Ir a contacto</a>
+    </div>
+  </div>`;
 }
 
 function courseAdminForm(course = {}) {

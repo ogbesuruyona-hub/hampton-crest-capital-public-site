@@ -237,7 +237,7 @@ main { min-height: 70vh; }
 .watchlist-add-area { display: grid; gap: 12px; }
 .watchlist-picker { padding: 14px; border: 1px solid var(--line); background: white; }
 .watchlist-picker-form { display: grid; gap: 12px; }
-input, textarea, select { width: 100%; min-height: 43px; padding: 10px 12px; color: var(--ink); background: white; border: 1px solid #cfd2cf; border-radius: 0; outline: 0; }
+input, textarea, select { width: 100%; min-height: 48px; padding: 11px 12px; color: var(--ink); background: white; border: 1px solid #cfd2cf; border-radius: 0; outline: 0; }
 input:focus, textarea:focus, select:focus { border-color: var(--gold); }
 textarea { min-height: 125px; resize: vertical; }
 .analysis-result h2 { margin: 5px 0; font-family: Georgia, serif; font-size: 2.2rem; font-weight: 400; }
@@ -249,19 +249,58 @@ textarea { min-height: 125px; resize: vertical; }
 .analysis-metrics span { color: var(--muted); font-size: .58rem; text-transform: uppercase; letter-spacing: .08em; }
 .analysis-metrics strong { margin-top: 5px; font-family: Georgia, serif; font-size: 1.15rem; font-weight: 400; }
 
-.auth-page { min-height: 760px; display: grid; place-items: center; padding: 110px 0 70px; background: var(--cream); }
-.auth-card { width: min(440px, calc(100% - 36px)); padding: 25px; background: white; border: 1px solid var(--line); }
-.auth-brand { display: flex; justify-content: center; margin-bottom: 20px; }
-.auth-brand .brand-logo { width: 230px; height: 58px; }
-.auth-card h1 { margin: 8px 0 8px; font-family: Georgia, serif; font-size: 2.4rem; font-weight: 400; }
-.auth-card > p { color: var(--muted); font-size: .78rem; line-height: 1.6; }
+.auth-page {
+  min-height: 760px;
+  display: grid;
+  place-items: center;
+  padding: 112px 0 72px;
+  background:
+    radial-gradient(circle at 78% 8%, rgba(217,164,65,.12), transparent 30%),
+    linear-gradient(180deg, var(--cream), #fbfaf6 58%, var(--cream));
+}
+.auth-card {
+  width: min(500px, calc(100% - 36px));
+  padding: clamp(26px, 5vw, 42px);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.96), rgba(251,250,246,.94)),
+    white;
+  border: 1px solid rgba(20,32,42,.14);
+  box-shadow: 0 28px 70px rgba(7,20,38,.09);
+}
+.auth-brand { display: flex; justify-content: center; margin-bottom: 18px; }
+.auth-brand .brand-logo { width: 190px; height: 50px; }
+.auth-card h1 { margin: 10px 0 10px; font-family: Georgia, serif; font-size: clamp(2.35rem, 9vw, 3.25rem); line-height: 1.04; font-weight: 400; letter-spacing: -.04em; }
+.auth-card > p { max-width: 410px; color: var(--muted); font-size: .86rem; line-height: 1.72; }
 .auth-tabs { display: grid; grid-template-columns: repeat(3, 1fr); margin: 20px 0; border-bottom: 1px solid var(--line); }
-.auth-tabs button, .auth-tabs a { padding: 11px 6px; border: 0; border-bottom: 2px solid transparent; color: var(--muted); background: transparent; font-size: .72rem; font-weight: 700; text-align: center; }
+.auth-tabs button, .auth-tabs a { min-height: 44px; padding: 13px 6px; border: 0; border-bottom: 2px solid transparent; color: var(--muted); background: transparent; font-size: .76rem; font-weight: 700; text-align: center; }
 .auth-tabs button.active, .auth-tabs a.active { color: var(--navy); border-color: var(--gold); }
 .form-stack { display: grid; gap: 14px; }
 .form-note { color: var(--muted); font-size: .62rem; line-height: 1.5; }
-.status-message { padding: 10px 12px; color: var(--navy); background: var(--cream); font-size: .7rem; line-height: 1.5; }
-.status-message.error { color: var(--danger); background: #f7e9e7; }
+.status-message { padding: 12px 14px; color: var(--navy); background: var(--cream); font-size: .76rem; line-height: 1.55; }
+.status-message.error { color: #6f3f0f; background: rgba(217,164,65,.14); border: 1px solid rgba(217,164,65,.24); }
+.auth-unavailable {
+  margin-top: 22px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.auth-unavailable h2 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+.auth-unavailable p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+.auth-support-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
 
 .contact-layout { display: grid; gap: 25px; }
 .contact-aside { padding: 22px; color: white; background: var(--navy); }
