@@ -504,44 +504,44 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
 .investment-principles .visual-shield::after,
 .strategy-philosophy-grid .visual-shield::after {
   background:
-    radial-gradient(circle at 72% 42%, rgba(255,255,255,.42), transparent 0 28%, rgba(216,189,120,.08) 29%, transparent 42%),
-    linear-gradient(90deg, transparent 0 51%, rgba(6,19,33,.08) 52%, transparent 53%),
-    linear-gradient(rgba(216,189,120,.24), rgba(216,189,120,.24)) 72% 45% / 105px 2px no-repeat,
-    radial-gradient(circle at 72% 46%, transparent 0 29%, rgba(6,19,33,.075) 30% 32%, transparent 33%),
-    linear-gradient(145deg, transparent 0 58%, rgba(216,189,120,.11) 59%, transparent 60%),
-    linear-gradient(145deg, rgba(6,19,33,.055), rgba(216,189,120,.10));
+    radial-gradient(ellipse at 78% 52%, rgba(6,19,33,.035) 0 30%, transparent 31%),
+    linear-gradient(90deg, transparent 0 72%, rgba(6,19,33,.038) 72.4%, transparent 73%),
+    linear-gradient(rgba(216,189,120,.13), rgba(216,189,120,.13)) 78% 53% / 82px 1px no-repeat,
+    radial-gradient(circle at 78% 53%, transparent 0 24%, rgba(6,19,33,.032) 25% 26%, transparent 27%),
+    linear-gradient(145deg, transparent 0 67%, rgba(216,189,120,.055) 68%, transparent 69%),
+    linear-gradient(145deg, rgba(6,19,33,.018), rgba(216,189,120,.04));
   clip-path: none;
 }
 .investment-principles .visual-data::after,
 .strategy-philosophy-grid .visual-data::after {
   background:
-    linear-gradient(180deg, transparent 0 54%, rgba(6,19,33,.07) 55% 100%),
-    linear-gradient(rgba(6,19,33,.11), rgba(6,19,33,.11)) 66% 74% / 40px 150px no-repeat,
-    linear-gradient(rgba(6,19,33,.08), rgba(6,19,33,.08)) 76% 74% / 40px 210px no-repeat,
-    linear-gradient(rgba(6,19,33,.07), rgba(6,19,33,.07)) 86% 74% / 40px 128px no-repeat,
-    linear-gradient(140deg, transparent 0 56%, rgba(216,189,120,.15) 57%, transparent 58%),
-    repeating-linear-gradient(0deg, transparent 0 38px, rgba(6,19,33,.045) 39px 40px),
-    repeating-linear-gradient(90deg, transparent 0 48px, rgba(6,19,33,.035) 49px 50px);
+    linear-gradient(rgba(6,19,33,.045), rgba(6,19,33,.045)) 72% 76% / 28px 92px no-repeat,
+    linear-gradient(rgba(6,19,33,.038), rgba(6,19,33,.038)) 81% 76% / 28px 132px no-repeat,
+    linear-gradient(rgba(6,19,33,.032), rgba(6,19,33,.032)) 90% 76% / 28px 78px no-repeat,
+    linear-gradient(140deg, transparent 0 59%, rgba(216,189,120,.075) 60%, transparent 61%),
+    radial-gradient(ellipse at 82% 72%, rgba(6,19,33,.028), transparent 40%),
+    repeating-linear-gradient(0deg, transparent 0 48px, rgba(6,19,33,.018) 49px 50px),
+    repeating-linear-gradient(90deg, transparent 0 62px, rgba(6,19,33,.014) 63px 64px);
 }
 .investment-principles .visual-horizon::after,
 .strategy-philosophy-grid .visual-horizon::after {
   background:
-    radial-gradient(circle at 80% 26%, rgba(216,189,120,.22), transparent 0 8%, transparent 9%),
-    linear-gradient(150deg, transparent 0 48%, rgba(255,255,255,.58) 49%, rgba(216,189,120,.18) 50%, transparent 51%),
-    radial-gradient(ellipse at 55% 88%, rgba(6,19,33,.08), transparent 0 34%),
-    radial-gradient(ellipse at 26% 78%, rgba(216,189,120,.13), transparent 0 32%),
-    linear-gradient(180deg, rgba(216,189,120,.08), transparent 56%),
-    repeating-linear-gradient(90deg, transparent 0 54px, rgba(6,19,33,.035) 55px 56px);
+    linear-gradient(150deg, transparent 0 57%, rgba(216,189,120,.075) 58%, transparent 59%),
+    radial-gradient(circle at 77% 29%, rgba(216,189,120,.11), transparent 0 5%, transparent 6%),
+    radial-gradient(ellipse at 58% 90%, rgba(6,19,33,.035), transparent 34%),
+    radial-gradient(ellipse at 30% 82%, rgba(216,189,120,.055), transparent 34%),
+    linear-gradient(180deg, rgba(216,189,120,.035), transparent 58%),
+    repeating-linear-gradient(90deg, transparent 0 78px, rgba(6,19,33,.015) 79px 80px);
 }
 .investment-principles .visual-risk::after,
 .strategy-philosophy-grid .visual-risk::after {
   background:
-    radial-gradient(circle at 76% 55%, transparent 0 21%, rgba(6,19,33,.085) 22% 23%, transparent 24%),
-    radial-gradient(circle at 76% 55%, transparent 0 38%, rgba(6,19,33,.075) 39% 40%, transparent 41%),
-    conic-gradient(from 34deg at 76% 55%, rgba(216,189,120,.16), transparent 0 17%, rgba(6,19,33,.075) 18%, transparent 24% 100%),
-    linear-gradient(32deg, transparent 0 55%, rgba(6,19,33,.10) 56%, transparent 57%),
-    linear-gradient(148deg, transparent 0 60%, rgba(216,189,120,.14) 61%, transparent 62%),
-    repeating-linear-gradient(0deg, transparent 0 38px, rgba(6,19,33,.035) 39px 40px);
+    radial-gradient(circle at 80% 52%, transparent 0 22%, rgba(6,19,33,.04) 23% 23.8%, transparent 24.5%),
+    radial-gradient(circle at 80% 52%, transparent 0 38%, rgba(6,19,33,.035) 39% 39.8%, transparent 40.5%),
+    conic-gradient(from 34deg at 80% 52%, rgba(216,189,120,.085), transparent 0 14%, rgba(6,19,33,.035) 15%, transparent 22% 100%),
+    linear-gradient(32deg, transparent 0 61%, rgba(6,19,33,.045) 62%, transparent 63%),
+    linear-gradient(148deg, transparent 0 65%, rgba(216,189,120,.07) 66%, transparent 67%),
+    repeating-linear-gradient(0deg, transparent 0 58px, rgba(6,19,33,.014) 59px 60px);
 }
 .investment-cta {
   display: flex;
@@ -1246,6 +1246,59 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
 .legal-paper-outline span:nth-child(2) { top: 31%; right: 27%; }
 .legal-paper-outline span:nth-child(3) { top: 40%; }
 .legal-paper-outline span:nth-child(4) { top: 49%; right: 23%; }
+.privacy-lock-outline {
+  position: relative;
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(216,189,120,.22);
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 50% 54%, rgba(216,189,120,.12), transparent 0 28%),
+    radial-gradient(circle at 50% 50%, transparent 0 42%, rgba(216,189,120,.13) 43% 44%, transparent 45%),
+    linear-gradient(145deg, rgba(255,255,255,.035), rgba(216,189,120,.025));
+  box-shadow: 0 30px 90px rgba(0,0,0,.24);
+}
+.privacy-lock-outline::before {
+  content: "";
+  position: absolute;
+  inset: 12% 16%;
+  border: 1px solid rgba(216,189,120,.34);
+  clip-path: polygon(50% 0, 90% 16%, 82% 70%, 50% 100%, 18% 70%, 10% 16%);
+}
+.privacy-lock-outline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  width: 82px;
+  height: 72px;
+  border: 1px solid rgba(216,189,120,.44);
+  border-radius: 14px;
+  transform: translate(-50%, -10%);
+}
+.privacy-lock-outline span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  width: 74px;
+  height: 62px;
+  border: 1px solid rgba(216,189,120,.44);
+  border-bottom: 0;
+  border-radius: 40px 40px 0 0;
+  transform: translateX(-50%);
+}
+.privacy-lock-outline span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 63%;
+  width: 1px;
+  height: 34px;
+  background: rgba(216,189,120,.5);
+  box-shadow: 0 -11px 0 4px rgba(216,189,120,.09);
+  transform: translateX(-50%);
+}
 .legal-info-panel {
   padding: 34px;
   border: 1px solid rgba(216,189,120,.25);
@@ -1856,20 +1909,20 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
 }
 .strategy-philosophy-grid .visual-discipline::after {
   background:
-    linear-gradient(rgba(216,189,120,.18), rgba(216,189,120,.18)) 72% 26% / 84px 1px no-repeat,
-    linear-gradient(rgba(6,19,33,.08), rgba(6,19,33,.08)) 72% 42% / 128px 1px no-repeat,
-    linear-gradient(rgba(6,19,33,.06), rgba(6,19,33,.06)) 72% 58% / 112px 1px no-repeat,
-    radial-gradient(circle at 76% 46%, rgba(216,189,120,.12), transparent 0 28%),
-    repeating-linear-gradient(0deg, transparent 0 34px, rgba(6,19,33,.035) 35px 36px),
-    repeating-linear-gradient(90deg, transparent 0 52px, rgba(6,19,33,.035) 53px 54px);
+    linear-gradient(rgba(216,189,120,.105), rgba(216,189,120,.105)) 74% 30% / 76px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.045), rgba(6,19,33,.045)) 74% 44% / 118px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.035), rgba(6,19,33,.035)) 74% 58% / 98px 1px no-repeat,
+    radial-gradient(circle at 77% 48%, rgba(216,189,120,.055), transparent 0 28%),
+    repeating-linear-gradient(0deg, transparent 0 58px, rgba(6,19,33,.014) 59px 60px),
+    repeating-linear-gradient(90deg, transparent 0 72px, rgba(6,19,33,.012) 73px 74px);
 }
 .strategy-philosophy-grid .visual-compound::after {
   background:
-    radial-gradient(circle at 32% 72%, rgba(6,19,33,.10) 0 4px, transparent 5px),
-    radial-gradient(circle at 55% 53%, rgba(216,189,120,.18) 0 6px, transparent 7px),
-    radial-gradient(circle at 78% 27%, rgba(216,189,120,.26) 0 8px, transparent 9px),
-    linear-gradient(150deg, transparent 0 50%, rgba(216,189,120,.18) 51%, transparent 52%),
-    radial-gradient(circle at 74% 44%, transparent 0 40%, rgba(6,19,33,.055) 41%, transparent 42%);
+    radial-gradient(circle at 40% 72%, rgba(6,19,33,.045) 0 3px, transparent 4px),
+    radial-gradient(circle at 58% 56%, rgba(216,189,120,.09) 0 4px, transparent 5px),
+    radial-gradient(circle at 78% 34%, rgba(216,189,120,.13) 0 5px, transparent 6px),
+    linear-gradient(150deg, transparent 0 57%, rgba(216,189,120,.08) 58%, transparent 59%),
+    radial-gradient(circle at 76% 46%, transparent 0 40%, rgba(6,19,33,.032) 41%, transparent 42%);
 }
 
 .strategy-application { color: #fff; background: var(--navy); }
