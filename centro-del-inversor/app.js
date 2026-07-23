@@ -730,7 +730,7 @@ const Pages = {
         <span class="eyebrow">Patrimonio · Disciplina · Visión</span>
         <h1 class="hero-statement"><span>Inversiones con propósito.</span><span>Resultados con disciplina.</span></h1>
         <p>Hampton Crest Capital ofrece formación institucional y herramientas de análisis para inversionistas que buscan construir patrimonio con criterio y rigor.</p>
-        <div class="button-row">${Components.Button({ label: "Acceso gratuito", href: "/analisis" })}${Components.Button({ label: "Explorar Academia", href: "/academia", variant: "secondary" })}</div>
+        <div class="button-row">${Components.Button({ label: "Explorar Academia Gratuita", href: "/academia" })}${Components.Button({ label: "Biblioteca gratuita", href: "/academia/libros", variant: "secondary" })}</div>
       </div></section>
       ${Components.Section({ content: `
         <div class="mission-layout"><div class="section-heading"><span class="eyebrow">Nuestra misión</span><h2>Elevar el nivel del inversionista hispanohablante a través de la educación.</h2></div>
