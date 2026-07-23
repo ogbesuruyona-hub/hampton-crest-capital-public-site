@@ -666,7 +666,19 @@ const Components = {
 
   Button: ({ label, href, variant = "primary" }) => `<a class="button button-${variant}" href="${href}" data-link>${label}</a>`,
   Section: ({ content, tone = "cream", className = "" }) => `<section class="section section-${tone} ${className}"><div class="container">${content}</div></section>`,
-  Card: ({ number, title, text }) => `<article class="feature-card"><span>${number}</span><h3>${title}</h3><p>${text}</p></article>`,
+  Card: ({ number, title, text }) => {
+    const icons = {
+      "01": `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 8.5h8.5c2.4 0 4 1.6 4 4v13H11c-2.4 0-4-1.6-4-4v-13Z"/><path d="M19.5 12.5h5.5v13h-5.5"/><path d="M11 14h4.5M11 18h4.5"/></svg>`,
+      "02": `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 24h20"/><path d="M9 21v-5M15 21v-9M21 21v-12"/><path d="M7 10h18"/><path d="M7 10v14M25 10v14"/></svg>`,
+      "03": `<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 27 9v7c0 6.4-4.3 10.7-11 13-6.7-2.3-11-6.6-11-13V9l11-5Z"/><path d="m11 16 3.2 3.2 7-7"/></svg>`,
+      "04": `<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="11"/><path d="M16 8v8l5 4"/><path d="M6 16h3M23 16h3"/></svg>`
+    };
+    return `<article class="feature-card feature-card-${number}" aria-label="${escapeHtml(title)}">
+      <div class="feature-card-media" aria-hidden="true">${icons[number] || icons["03"]}</div>
+      <h3>${title}</h3>
+      <p>${text}</p>
+    </article>`;
+  },
   PageHero: ({ eyebrow, title, text }) => `<section class="page-hero"><div class="container"><span class="eyebrow">${eyebrow}</span><h1>${title}</h1><p>${text}</p></div></section>`,
   AcademyHero: ({ eyebrow, title, text }) => `<section class="page-hero academy-hero"><div class="container academy-hero-inner"><span class="eyebrow">${eyebrow}</span><h1>${title}</h1><p>${text}</p></div></section>`,
   DisclaimerBlock: ({ compact = false } = {}) => `<aside class="disclaimer ${compact ? "disclaimer-compact" : ""}"><strong>Contenido exclusivamente educativo.</strong> Este análisis es únicamente educativo e informativo. No constituye asesoría financiera, recomendación de inversión, oferta ni solicitud para comprar o vender valores. Toda inversión implica riesgo, incluida la posible pérdida del capital.</aside>`

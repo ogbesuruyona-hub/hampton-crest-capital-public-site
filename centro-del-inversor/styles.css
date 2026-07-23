@@ -133,11 +133,92 @@ main { min-height: 70vh; }
 .mission-layout { display: grid; gap: 25px; }
 .mission-copy { padding-top: 22px; border-top: 1px solid var(--line); }
 .mission-copy p { margin: 0 0 22px; color: var(--muted); font-size: .93rem; line-height: 1.85; }
-.feature-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.feature-card { min-height: 235px; padding: 24px; background: white; }
-.feature-card > span { color: var(--gold); font-family: Georgia, serif; font-size: 1rem; }
-.feature-card h3 { margin: 45px 0 10px; font-family: Georgia, serif; font-size: 1.45rem; font-weight: 400; }
-.feature-card p { margin: 0; color: var(--muted); font-size: .78rem; line-height: 1.7; }
+.feature-grid { display: grid; gap: 16px; background: transparent; border: 0; }
+.feature-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 126px 28px 30px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.96), rgba(246,242,234,.92)),
+    var(--paper);
+  border: 1px solid rgba(20,32,42,.13);
+  border-radius: 16px;
+  box-shadow: 0 22px 58px rgba(7,20,38,.075);
+}
+.feature-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 96px;
+  border-bottom: 1px solid rgba(217,164,65,.25);
+  background:
+    radial-gradient(circle at 18% 24%, rgba(217,164,65,.18), transparent 0 25%),
+    linear-gradient(135deg, rgba(217,164,65,.13), transparent 30%),
+    linear-gradient(120deg, rgba(8,27,43,.98), rgba(3,16,28,.98));
+}
+.feature-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 96px 0 0;
+  pointer-events: none;
+}
+.feature-card-media {
+  position: absolute;
+  top: 23px;
+  left: 28px;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: linear-gradient(145deg, #e8cf86, #b9852d);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+.feature-card-media svg {
+  width: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.feature-card h3 { margin: 0 0 14px; color: var(--navy); font-family: Georgia, serif; font-size: clamp(1.8rem, 6vw, 2.35rem); line-height: 1.08; font-weight: 400; letter-spacing: -.035em; }
+.feature-card h3::after { content: ""; display: block; width: 44px; height: 1px; margin-top: 14px; background: var(--gold); }
+.feature-card p { max-width: 430px; margin: 0; color: rgba(83,97,106,.88); font-size: .92rem; line-height: 1.72; }
+.feature-card-01::after {
+  background:
+    linear-gradient(145deg, transparent 0 68%, rgba(217,164,65,.045) 69%, transparent 70%),
+    radial-gradient(ellipse at 82% 72%, rgba(7,20,38,.026), transparent 38%);
+}
+.feature-card-02::after {
+  background:
+    linear-gradient(rgba(7,20,38,.034), rgba(7,20,38,.034)) 72% 80% / 24px 76px no-repeat,
+    linear-gradient(rgba(7,20,38,.03), rgba(7,20,38,.03)) 82% 80% / 24px 112px no-repeat,
+    linear-gradient(rgba(7,20,38,.024), rgba(7,20,38,.024)) 91% 80% / 24px 66px no-repeat,
+    linear-gradient(145deg, transparent 0 68%, rgba(217,164,65,.052) 69%, transparent 70%);
+}
+.feature-card-03::after {
+  background:
+    radial-gradient(circle at 82% 54%, transparent 0 24%, rgba(7,20,38,.034) 25% 25.8%, transparent 26.5%),
+    radial-gradient(circle at 82% 54%, transparent 0 40%, rgba(7,20,38,.028) 41% 41.8%, transparent 42.5%),
+    linear-gradient(34deg, transparent 0 64%, rgba(7,20,38,.035) 65%, transparent 66%);
+}
+.feature-card-04::after {
+  background:
+    linear-gradient(150deg, transparent 0 62%, rgba(217,164,65,.062) 63%, transparent 64%),
+    radial-gradient(ellipse at 58% 92%, rgba(7,20,38,.03), transparent 36%),
+    radial-gradient(ellipse at 30% 82%, rgba(217,164,65,.045), transparent 34%);
+}
 .cta-band { display: grid; gap: 25px; align-items: end; }
 .cta-band h2 { max-width: 680px; margin: 10px 0; font-family: Georgia, serif; font-size: clamp(2.25rem, 9vw, 4.2rem); font-weight: 400; line-height: 1.05; }
 .cta-band p { max-width: 580px; margin: 0; color: #afbdc5; line-height: 1.7; }
@@ -618,5 +699,24 @@ th { color: var(--muted); background: var(--cream); font-size: .57rem; letter-sp
   .hero .button, .cta-band .button { width: 100%; }
   .page-hero { padding-top: 112px; }
   .auth-card { padding: 21px; }
-  .feature-card { min-height: 205px; }
+  .feature-card {
+    min-height: 288px;
+    padding: 114px 24px 28px;
+    border-radius: 14px;
+  }
+  .feature-card::before {
+    height: 88px;
+  }
+  .feature-card::after {
+    inset: 88px 0 0;
+  }
+  .feature-card-media {
+    top: 19px;
+    left: 24px;
+    width: 50px;
+    height: 50px;
+  }
+  .feature-card-media svg {
+    width: 25px;
+  }
 }
