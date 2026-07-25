@@ -18,9 +18,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <title>Estrategia de inversión | Hampton Crest Capital</title>
     <link rel="canonical" href="https://hamptoncrestcapital.com/strategy.html" />
-    <link
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/hampton-hero-globe-optimized.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -30,7 +28,7 @@
       <div class="nav-shell">
         <a class="brand" href="index.html" aria-label="Hampton Crest Capital, inicio">
           <span class="official-logo-crop logo-on-dark">
-            <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" />
+            <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" decoding="async" fetchpriority="high" />
           </span>
         </a>
 
@@ -183,7 +181,7 @@
         <div class="footer-company">
           <a class="brand footer-brand" href="index.html">
             <span class="official-logo-crop footer-logo logo-on-dark">
-              <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" />
+              <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" loading="lazy" decoding="async" />
             </span>
           </a>
           <p>Inversiones con propósito,<br />resultados con disciplina.</p>
@@ -219,6 +217,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

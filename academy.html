@@ -12,6 +12,7 @@
     <meta property="og:image" content="https://hamptoncrestcapital.com/assets/hampton-hero-globe-optimized.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="assets/hampton-hero-globe-optimized.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -20,7 +21,7 @@
     <header class="site-header" id="top">
       <div class="nav-shell">
         <a class="brand" href="index.html" aria-label="Hampton Crest Capital, inicio">
-          <span class="official-logo-crop logo-on-dark"><img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" /></span>
+          <span class="official-logo-crop logo-on-dark"><img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" decoding="async" fetchpriority="high" /></span>
         </a>
         <nav class="desktop-nav" aria-label="Navegación principal">
           <a href="index.html">Home</a>
@@ -62,6 +63,7 @@
               src="assets/hampton-crest-academy-logo-tight.jpg"
               alt="Hampton Crest Academy"
               loading="lazy"
+              decoding="async"
             />
             <div class="eyebrow"><span></span>Contenido avanzado</div>
             <h2>Formación financiera<br /><em>con profundidad.</em></h2>
@@ -84,7 +86,7 @@
       <div class="container footer-main">
         <div class="footer-company">
           <a class="brand footer-brand" href="index.html">
-            <span class="official-logo-crop footer-logo logo-on-dark"><img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" /></span>
+            <span class="official-logo-crop footer-logo logo-on-dark"><img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" loading="lazy" decoding="async" /></span>
           </a>
           <p>Inversiones con propósito,<br />resultados con disciplina.</p>
         </div>
@@ -112,6 +114,6 @@
       <div class="container footer-disclaimer">Información únicamente para fines informativos. No constituye una oferta de inversión ni asesoramiento financiero.</div>
       <div class="container footer-bottom"><span>&copy; 2026 Hampton Crest Capital. Todos los derechos reservados.</span><div><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div></div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

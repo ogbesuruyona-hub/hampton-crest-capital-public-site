@@ -3141,3 +3141,58 @@ footer .footer-bottom div {
     line-height: 1.6;
   }
 }
+
+/* Smoothness pass: defer offscreen rendering and simplify motion on touch devices. */
+.section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 760px;
+}
+
+.hero,
+.subpage-hero {
+  content-visibility: visible;
+}
+
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 360px;
+}
+
+.hero-image,
+.hero-globe-effects,
+.hero-connection-lines,
+.reveal {
+  will-change: transform, opacity;
+}
+
+.reveal.is-visible {
+  will-change: auto;
+}
+
+@media (pointer: coarse), (max-width: 760px) {
+  .hero::before,
+  .hero-image,
+  .hero-connection-lines,
+  .hero-connection-lines::before,
+  .hero-connection-lines::after {
+    animation: none;
+  }
+
+  .hero-image {
+    transform: scale(1.035);
+  }
+
+  .hero-globe-effects {
+    opacity: .48;
+    animation-duration: 24s;
+  }
+
+  .hero-globe-effects::before,
+  .hero-globe-effects::after {
+    animation-duration: 24s;
+  }
+
+  .hero-globe-effects span {
+    animation-duration: 20s;
+  }
+}

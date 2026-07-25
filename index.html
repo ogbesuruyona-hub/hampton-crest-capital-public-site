@@ -20,9 +20,7 @@
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <title>Hampton Crest Capital | Private Investment Firm</title>
     <link rel="canonical" href="https://hamptoncrestcapital.com/" />
-    <link
-      rel="stylesheet"
-    />
+    <link rel="preload" href="assets/hampton-hero-globe-optimized.jpg" as="image" fetchpriority="high" />
     <link rel="preload" href="styles.css" as="style" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -32,7 +30,7 @@
       <div class="nav-shell">
         <a class="brand" href="#top" aria-label="Hampton Crest Capital, inicio">
           <span class="official-logo-crop logo-on-dark">
-            <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" />
+            <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" decoding="async" fetchpriority="high" />
           </span>
         </a>
 
@@ -134,6 +132,7 @@
                 alt="Isaac Fernández Pérez"
                 class="manager-photo"
                 loading="lazy"
+                decoding="async"
                 onerror="this.classList.add('is-missing')"
               />
             </div>
@@ -209,7 +208,7 @@
       <section class="academy section" id="academia">
         <div class="container academy-grid">
           <div class="academy-visual academy-visual-clean">
-            <img class="academy-logo-clean" src="assets/hampton-crest-academy-logo-tight.jpg" alt="Hampton Crest Academy" loading="lazy" />
+            <img class="academy-logo-clean" src="assets/hampton-crest-academy-logo-tight.jpg" alt="Hampton Crest Academy" loading="lazy" decoding="async" />
           </div>
           <div class="academy-copy">
             <div class="eyebrow"><span></span>Hampton Crest Academy</div>
@@ -269,7 +268,7 @@
         <div class="footer-company">
           <a class="brand footer-brand" href="#top">
             <span class="official-logo-crop footer-logo logo-on-dark">
-              <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" />
+              <img src="assets/hampton-crest-logo-transparent-ivory.png" alt="Hampton Crest Capital" loading="lazy" decoding="async" />
             </span>
           </a>
           <p>Inversiones con propósito,<br />resultados con disciplina.</p>
@@ -305,6 +304,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

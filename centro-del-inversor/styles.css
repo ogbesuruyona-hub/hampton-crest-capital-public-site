@@ -720,3 +720,37 @@ th { color: var(--muted); background: var(--cream); font-size: .57rem; letter-sp
     width: 25px;
   }
 }
+
+/* Smoothness pass for the embedded Investor Center app. */
+.section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 620px;
+}
+
+.hero,
+.page-hero {
+  content-visibility: visible;
+}
+
+@media (pointer: coarse) {
+  .page {
+    animation-duration: .18s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .page {
+    animation: none;
+  }
+}
