@@ -2536,3 +2536,365 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   .hero-globe-effects,
   .hero-connection-lines { opacity: .18; }
 }
+
+/* Final institutional card system for strategy and documents. */
+.strategy-philosophy-grid {
+  gap: 20px;
+}
+
+.strategy-philosophy-grid .strategy-principle-card {
+  min-height: 335px;
+  justify-content: flex-start;
+  padding: 142px 34px 36px;
+  border: 1px solid rgba(19,32,42,.13);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.97), rgba(246,242,234,.91)),
+    var(--paper);
+  box-shadow: 0 24px 60px rgba(7,22,35,.075);
+}
+
+.strategy-philosophy-grid .strategy-principle-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  width: 100%;
+  height: 108px;
+  border-bottom: 1px solid rgba(216,189,120,.24);
+  background:
+    radial-gradient(circle at 18% 28%, rgba(216,189,120,.18), transparent 0 25%),
+    linear-gradient(135deg, rgba(216,189,120,.14), transparent 30%),
+    linear-gradient(120deg, rgba(8,27,43,.99), rgba(3,16,28,.98));
+}
+
+.strategy-philosophy-grid .strategy-principle-card::after {
+  inset: 108px 0 0;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  opacity: 1;
+}
+
+.strategy-philosophy-grid .card-number {
+  display: none;
+}
+
+.strategy-philosophy-grid .strategy-principle-card .icon-wrap {
+  top: 28px;
+  left: 34px;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e8cf86, #b9852d);
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+
+.strategy-philosophy-grid .strategy-principle-card .icon-wrap svg {
+  width: 28px;
+  stroke-width: 1.35;
+}
+
+.strategy-philosophy-grid .strategy-principle-card h3 {
+  max-width: 360px;
+  margin: 0 0 14px;
+  color: var(--navy);
+  font: 650 clamp(22px, 2.2vw, 30px)/1.14 "Manrope", sans-serif;
+  letter-spacing: -.04em;
+}
+
+.strategy-philosophy-grid .strategy-principle-card h3::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin-top: 17px;
+  background: var(--gold);
+}
+
+.strategy-philosophy-grid .strategy-principle-card p {
+  max-width: 360px;
+  color: rgba(83,97,106,.88);
+  font-size: 13px;
+  line-height: 1.78;
+}
+
+.strategy-philosophy-grid .visual-discipline::after {
+  background:
+    linear-gradient(rgba(216,189,120,.09), rgba(216,189,120,.09)) 78% 28% / 82px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.035), rgba(6,19,33,.035)) 78% 42% / 126px 1px no-repeat,
+    linear-gradient(rgba(6,19,33,.026), rgba(6,19,33,.026)) 78% 56% / 104px 1px no-repeat,
+    radial-gradient(ellipse at 76% 46%, rgba(6,19,33,.026), transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0 72px, rgba(6,19,33,.012) 73px 74px);
+}
+
+.strategy-philosophy-grid .visual-risk::after {
+  background:
+    radial-gradient(circle at 82% 54%, transparent 0 24%, rgba(6,19,33,.033) 25% 25.8%, transparent 26.5%),
+    radial-gradient(circle at 82% 54%, transparent 0 40%, rgba(6,19,33,.027) 41% 41.8%, transparent 42.5%),
+    conic-gradient(from 34deg at 82% 54%, rgba(216,189,120,.074), transparent 0 14%, rgba(6,19,33,.031) 15%, transparent 22% 100%),
+    linear-gradient(34deg, transparent 0 64%, rgba(6,19,33,.031) 65%, transparent 66%),
+    repeating-linear-gradient(0deg, transparent 0 58px, rgba(6,19,33,.012) 59px 60px);
+}
+
+.strategy-philosophy-grid .visual-horizon::after {
+  background:
+    linear-gradient(150deg, transparent 0 62%, rgba(216,189,120,.062) 63%, transparent 64%),
+    radial-gradient(circle at 77% 29%, rgba(216,189,120,.09), transparent 0 5%, transparent 6%),
+    radial-gradient(ellipse at 58% 92%, rgba(6,19,33,.03), transparent 36%),
+    radial-gradient(ellipse at 30% 82%, rgba(216,189,120,.045), transparent 34%),
+    repeating-linear-gradient(90deg, transparent 0 78px, rgba(6,19,33,.013) 79px 80px);
+}
+
+.strategy-philosophy-grid .visual-compound::after {
+  background:
+    radial-gradient(circle at 40% 72%, rgba(6,19,33,.036) 0 3px, transparent 4px),
+    radial-gradient(circle at 58% 56%, rgba(216,189,120,.07) 0 4px, transparent 5px),
+    radial-gradient(circle at 78% 34%, rgba(216,189,120,.1) 0 5px, transparent 6px),
+    linear-gradient(150deg, transparent 0 58%, rgba(216,189,120,.064) 59%, transparent 60%),
+    radial-gradient(circle at 76% 46%, transparent 0 40%, rgba(6,19,33,.027) 41%, transparent 42%);
+}
+
+.strategy-philosophy-grid .visual-shield::after {
+  background:
+    radial-gradient(ellipse at 78% 52%, rgba(6,19,33,.031) 0 30%, transparent 31%),
+    linear-gradient(90deg, transparent 0 72%, rgba(6,19,33,.033) 72.4%, transparent 73%),
+    linear-gradient(rgba(216,189,120,.1), rgba(216,189,120,.1)) 78% 53% / 82px 1px no-repeat,
+    radial-gradient(circle at 78% 53%, transparent 0 24%, rgba(6,19,33,.028) 25% 26%, transparent 27%),
+    linear-gradient(145deg, transparent 0 67%, rgba(216,189,120,.044) 68%, transparent 69%);
+}
+
+.strategy-philosophy-grid .visual-data::after {
+  background:
+    linear-gradient(rgba(6,19,33,.036), rgba(6,19,33,.036)) 72% 80% / 24px 78px no-repeat,
+    linear-gradient(rgba(6,19,33,.03), rgba(6,19,33,.03)) 82% 80% / 24px 114px no-repeat,
+    linear-gradient(rgba(6,19,33,.024), rgba(6,19,33,.024)) 91% 80% / 24px 66px no-repeat,
+    linear-gradient(145deg, transparent 0 68%, rgba(216,189,120,.05) 69%, transparent 70%),
+    repeating-linear-gradient(0deg, transparent 0 48px, rgba(6,19,33,.014) 49px 50px),
+    repeating-linear-gradient(90deg, transparent 0 62px, rgba(6,19,33,.011) 63px 64px);
+}
+
+.document-grid {
+  gap: 22px;
+}
+
+.document-card {
+  min-height: 348px;
+  justify-content: flex-start;
+  padding: 132px 30px 30px;
+  color: var(--navy);
+  border: 1px solid rgba(19,32,42,.13);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.97), rgba(246,242,234,.9)),
+    var(--paper);
+  box-shadow: 0 24px 60px rgba(7,22,35,.09);
+}
+
+.document-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  border-bottom: 1px solid rgba(216,189,120,.25);
+  background:
+    radial-gradient(circle at 18% 28%, rgba(216,189,120,.18), transparent 0 25%),
+    linear-gradient(135deg, rgba(216,189,120,.14), transparent 30%),
+    linear-gradient(120deg, rgba(8,27,43,.99), rgba(3,16,28,.98));
+}
+
+.document-card::after {
+  inset: 100px 0 0;
+  z-index: 1;
+  opacity: 1;
+}
+
+.document-icon {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  z-index: 2;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e8cf86, #b9852d);
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+
+.document-icon svg {
+  width: 28px;
+  stroke-width: 1.35;
+}
+
+.document-card h2,
+.document-card h3 {
+  max-width: 360px;
+  color: var(--navy);
+  font: 650 clamp(21px, 2.1vw, 28px)/1.14 "Manrope", sans-serif;
+  letter-spacing: -.04em;
+}
+
+.document-card h2::after,
+.document-card h3::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin-top: 17px;
+  background: var(--gold);
+}
+
+.document-card p {
+  max-width: 360px;
+  margin-top: 16px;
+  color: rgba(83,97,106,.88);
+  font-size: 13px;
+  line-height: 1.76;
+}
+
+.document-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 34px;
+}
+
+.document-card .button {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+.document-card .tool-button {
+  color: #fff;
+  border: 1px solid var(--navy);
+  background: var(--navy);
+}
+
+.document-card .download-button {
+  color: var(--navy);
+  border: 1px solid rgba(19,32,42,.16);
+  background: rgba(255,255,255,.74);
+}
+
+.document-card .tool-button:hover,
+.document-card .download-button:hover {
+  color: #fff;
+  border-color: var(--gold);
+  background: linear-gradient(145deg, #d8bd78, #b9852d);
+  box-shadow: 0 14px 30px rgba(185,133,45,.18);
+}
+
+.doc-subscription::after {
+  background:
+    linear-gradient(90deg, transparent 0 66%, rgba(6,19,33,.03) 66.5%, transparent 67%),
+    linear-gradient(0deg, transparent 0 58%, rgba(216,189,120,.06) 58.5%, transparent 59%),
+    linear-gradient(145deg, transparent 0 68%, rgba(216,189,120,.045) 69%, transparent 70%),
+    radial-gradient(circle at 76% 34%, rgba(6,19,33,.025), transparent 22%);
+}
+
+.doc-presentation::after {
+  background:
+    linear-gradient(0deg, transparent 0 50%, rgba(6,19,33,.026) 50.5%, transparent 51%),
+    linear-gradient(90deg, transparent 0 46%, rgba(216,189,120,.055) 46.5%, transparent 47%),
+    radial-gradient(circle at 72% 34%, rgba(216,189,120,.055), transparent 12%),
+    linear-gradient(35deg, transparent 0 62%, rgba(6,19,33,.026) 63%, transparent 64%);
+}
+
+.doc-terms::after {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 31px, rgba(6,19,33,.018) 32px 33px),
+    linear-gradient(135deg, transparent 0 67%, rgba(216,189,120,.045) 68%, transparent 69%),
+    radial-gradient(ellipse at 78% 54%, rgba(6,19,33,.025), transparent 38%);
+}
+
+.doc-prospectus::after {
+  background:
+    linear-gradient(rgba(6,19,33,.033), rgba(6,19,33,.033)) 72% 78% / 22px 74px no-repeat,
+    linear-gradient(rgba(6,19,33,.027), rgba(6,19,33,.027)) 82% 78% / 22px 108px no-repeat,
+    linear-gradient(rgba(6,19,33,.022), rgba(6,19,33,.022)) 92% 78% / 22px 62px no-repeat,
+    linear-gradient(145deg, transparent 0 67%, rgba(216,189,120,.052) 68%, transparent 69%),
+    repeating-linear-gradient(0deg, transparent 0 48px, rgba(6,19,33,.013) 49px 50px);
+}
+
+.doc-hedge::after {
+  background:
+    radial-gradient(circle at 78% 45%, transparent 0 24%, rgba(6,19,33,.032) 25% 25.8%, transparent 26.5%),
+    radial-gradient(circle at 78% 45%, transparent 0 40%, rgba(6,19,33,.026) 41% 41.8%, transparent 42.5%),
+    linear-gradient(150deg, transparent 0 62%, rgba(216,189,120,.052) 63%, transparent 64%),
+    linear-gradient(30deg, transparent 0 46%, rgba(6,19,33,.026) 47%, transparent 48%);
+}
+
+@media (max-width: 980px) {
+  .strategy-philosophy-grid {
+    gap: 16px;
+  }
+
+  .document-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-philosophy-grid .strategy-principle-card {
+    min-height: 292px;
+    padding: 124px 26px 30px;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card::before {
+    height: 94px;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card::after {
+    inset: 94px 0 0;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card .icon-wrap {
+    top: 21px;
+    left: 26px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card h3,
+  .document-card h2,
+  .document-card h3 {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .document-card {
+    min-height: 315px;
+    padding: 118px 26px 28px;
+  }
+
+  .document-card::before {
+    height: 90px;
+  }
+
+  .document-card::after {
+    inset: 90px 0 0;
+  }
+
+  .document-icon {
+    top: 19px;
+    left: 26px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .document-actions {
+    padding-top: 28px;
+  }
+}
