@@ -878,27 +878,29 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
 .academy-rings span:nth-child(2) { width: 70%; border-color: rgba(212,186,123,.2); }
 .academy-rings span:nth-child(3) { width: 98%; border-color: rgba(212,186,123,.08); }
 .academy-visual-clean {
-  min-height: 360px;
+  min-height: 430px;
   display: grid;
   place-items: center;
-  padding: clamp(30px, 5vw, 54px);
-  color: var(--navy);
+  padding: clamp(34px, 5vw, 58px);
+  color: #fff;
   background:
-    radial-gradient(circle at 46% 36%, rgba(216,189,120,.13), transparent 32%),
-    linear-gradient(145deg, rgba(255,255,255,.86), rgba(244,240,231,.94));
-  border: 1px solid rgba(198,169,106,.26);
-  box-shadow: 0 24px 70px rgba(7,22,35,.075);
+    radial-gradient(circle at 50% 38%, rgba(216,189,120,.08), transparent 34%),
+    radial-gradient(circle at 72% 58%, rgba(255,255,255,.035), transparent 30%),
+    linear-gradient(145deg, #071426 0%, #0a1527 47%, #101827 100%);
+  border: 1px solid rgba(198,169,106,.18);
+  box-shadow: 0 35px 90px rgba(6,19,33,.18);
 }
 .academy-visual-clean::before {
   content: "";
   position: absolute;
-  inset: 18px;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(198,169,106,.14);
+  border: 0;
   background:
-    linear-gradient(90deg, transparent 0 48%, rgba(198,169,106,.08) 48% 49%, transparent 49% 100%),
-    linear-gradient(180deg, transparent 0 58%, rgba(8,22,36,.045) 58% 59%, transparent 59% 100%);
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(212,186,123,.13) 34% 34.2%, transparent 34.4% 100%),
+    radial-gradient(circle at 50% 50%, transparent 0 48%, rgba(212,186,123,.08) 48% 48.15%, transparent 48.35% 100%);
+  opacity: .72;
 }
 .academy-visual-clean::after,
 .academy-visual-clean .academy-rings {
@@ -907,10 +909,12 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
 .academy-logo-clean {
   position: relative;
   z-index: 3;
-  width: min(78%, 430px);
+  width: min(84%, 500px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 14px 28px rgba(6,19,33,.12));
+  box-shadow: none;
+  filter: contrast(1.04) saturate(1.03) drop-shadow(0 20px 38px rgba(0,0,0,.22));
+  mix-blend-mode: screen;
 }
 .academy-copy h2 { font-size: clamp(42px, 5vw, 68px); }
 .academy-copy h3 { margin: 28px 0 13px; color: var(--navy); font: 500 18px/1.5 "Manrope"; }
@@ -1549,12 +1553,12 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
 }
 .premium-academy-logo {
   display: block;
-  max-height: 86px;
+  max-height: 78px;
   width: auto;
-  max-width: min(420px, 78vw);
+  max-width: min(380px, 78vw);
   margin: 0 0 34px;
   object-fit: contain;
-  filter: drop-shadow(0 12px 22px rgba(6,19,33,.1));
+  filter: drop-shadow(0 12px 22px rgba(6,19,33,.12));
 }
 .premium-academy-copy .eyebrow {
   justify-content: center;
