@@ -3216,10 +3216,10 @@ footer .footer-social-links a::after {
   position: absolute;
   inset: 4px;
   z-index: 0;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 50%;
-  background: rgba(255,255,255,.028);
-  transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: transform .22s ease, background .22s ease;
 }
 
 footer .footer-social-links a::before {
@@ -3269,9 +3269,8 @@ footer .footer-social-links a:focus-visible {
 
 footer .footer-social-links a:hover::after,
 footer .footer-social-links a:focus-visible::after {
-  border-color: rgba(216,189,120,.54);
-  background: rgba(216,189,120,.07);
-  box-shadow: 0 8px 22px rgba(216,189,120,.08);
+  background: transparent;
+  box-shadow: none;
 }
 
 @media (max-width: 760px) {
