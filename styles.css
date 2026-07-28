@@ -2111,21 +2111,48 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
 }
 
 .strategy-application { color: #fff; background: var(--navy); }
-.strategy-process { margin-top: 78px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.02); }
-.process-block { display: grid; grid-template-columns: .34fr 1fr; gap: 50px; padding: 45px; }
-.process-heading span { color: rgba(216,189,120,.55); font-size: 10px; letter-spacing: .18em; }
-.process-heading h3 { margin: 18px 0 0; font: 500 34px/1.1 "Manrope"; letter-spacing: -.04em; }
-.process-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-.process-cards-single { grid-template-columns: minmax(0, .5fr); }
+.strategy-process {
+  margin-top: 70px;
+  padding: 14px;
+  border: 1px solid rgba(216,189,120,.16);
+  background:
+    radial-gradient(circle at 86% 0%, rgba(216,189,120,.09), transparent 28%),
+    linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+.process-block {
+  display: grid;
+  grid-template-columns: .28fr 1fr;
+  gap: clamp(28px, 5vw, 58px);
+  padding: clamp(30px, 4.5vw, 52px);
+}
+.process-heading {
+  position: relative;
+  padding-top: 4px;
+}
+.process-heading::before {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin-bottom: 18px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.process-heading span { color: rgba(216,189,120,.78); font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.process-heading h3 { margin: 16px 0 0; font: 500 clamp(30px, 4vw, 46px)/1.05 "Manrope"; letter-spacing: -.055em; }
+.process-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.process-cards-single { grid-template-columns: minmax(0, 1fr); max-width: 680px; }
 .process-card {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 220px;
-  padding: 30px;
-  border: 1px solid rgba(255,255,255,.13);
-  background: var(--navy-soft);
-  box-shadow: inset 0 0 80px rgba(198,169,106,.04);
+  min-height: 245px;
+  padding: 34px;
+  border: 1px solid rgba(216,189,120,.18);
+  background:
+    linear-gradient(145deg, rgba(12,31,45,.94), rgba(7,20,33,.96));
+  box-shadow: 0 22px 55px rgba(0,0,0,.14), inset 0 0 80px rgba(198,169,106,.045);
+  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
 }
 .process-card::before {
   content: "";
@@ -2134,28 +2161,52 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(6,19,33,.45), rgba(6,19,33,.18)),
-    radial-gradient(circle at 82% 18%, rgba(216,189,120,.1), transparent 32%);
+    linear-gradient(135deg, rgba(6,19,33,.22), rgba(6,19,33,.64)),
+    radial-gradient(circle at 84% 18%, rgba(216,189,120,.12), transparent 31%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 42px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.018) 0 1px, transparent 1px 54px);
 }
 .process-card::after {
   content: "";
   position: absolute;
   z-index: 1;
-  right: -28px;
-  bottom: -36px;
-  width: 210px;
-  height: 210px;
-  opacity: .08;
+  right: -42px;
+  bottom: -58px;
+  width: 230px;
+  height: 230px;
+  opacity: .11;
   pointer-events: none;
   background:
-    linear-gradient(135deg, transparent 0 44%, var(--gold-bright) 44% 45%, transparent 46%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.28) 0 1px, transparent 1px 30px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.16) 0 1px, transparent 1px 42px);
+    radial-gradient(circle at 50% 50%, transparent 0 44%, rgba(216,189,120,.55) 44.5% 45%, transparent 45.5%),
+    linear-gradient(135deg, transparent 0 49%, rgba(216,189,120,.7) 49% 50%, transparent 51%);
 }
 .process-card > * { position: relative; z-index: 2; }
-.process-card h4 { margin: 14px 0 12px; color: #fff; font: 500 22px/1.25 "Manrope"; letter-spacing: -.025em; }
-.process-card p { max-width: 360px; margin: 0; color: rgba(255,255,255,.55); font-size: 12px; line-height: 1.75; }
-.process-divider { height: 1px; margin: 0 45px; background: linear-gradient(90deg, transparent, rgba(216,189,120,.45), transparent); }
+.process-card-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  color: var(--gold-bright);
+  border: 1px solid rgba(216,189,120,.36);
+  background: rgba(255,255,255,.035);
+}
+.process-card-icon svg {
+  width: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.process-card h4 { margin: 14px 0 12px; color: #fff; font: 500 24px/1.18 "Manrope"; letter-spacing: -.035em; }
+.process-card p { max-width: 420px; margin: 0; color: rgba(255,255,255,.62); font-size: 12px; line-height: 1.78; }
+.process-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(216,189,120,.36);
+  box-shadow: 0 28px 70px rgba(0,0,0,.2), inset 0 0 80px rgba(198,169,106,.055);
+}
+.process-divider { height: 1px; margin: 0 52px; background: linear-gradient(90deg, transparent, rgba(216,189,120,.32), transparent); }
 
 .strategy-request { background: var(--cream); }
 .request-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 10%; align-items: end; }
@@ -3478,5 +3529,38 @@ footer .footer-social-links a[href^="tel:"]::before {
 
   footer .footer-contact .footer-social-links {
     gap: 4px;
+  }
+}
+
+/* Strategy application cards: final institutional treatment. */
+.strategy-process .process-heading span,
+.strategy-process .strategy-label {
+  color: var(--gold-bright);
+}
+
+.strategy-process .process-card p {
+  color: rgba(255,255,255,.66);
+}
+
+.strategy-process .process-card-icon {
+  color: var(--gold-bright);
+}
+
+@media (max-width: 760px) {
+  .strategy-process {
+    padding: 10px;
+  }
+
+  .strategy-process .process-block {
+    padding: 28px 18px;
+  }
+
+  .strategy-process .process-card {
+    min-height: 230px;
+    padding: 28px;
+  }
+
+  .strategy-process .process-card-icon {
+    margin-bottom: 24px;
   }
 }
