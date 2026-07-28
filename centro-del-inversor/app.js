@@ -615,9 +615,22 @@ const Components = {
     <footer class="site-footer ${academy ? "academy-site-footer" : ""}">
       <div class="footer-top">
         <a class="brand footer-brand ${academy ? "academy-footer-brand" : ""}" href="/" data-link>${Components.Logo()}</a>
-        <div class="footer-social">
-          <span>Síguenos</span>
-          <div class="footer-social-icons" aria-label="Redes sociales oficiales">
+        <nav class="footer-nav" aria-label="Explorar">
+          <a href="/" data-link>Inicio</a>
+          <a href="/academia" data-link>Academia gratuita</a>
+          <a href="/analisis" data-link>Análisis</a>
+          <a href="/academia/libros" data-link>Libros</a>
+          <a href="/contacto" data-link>Contacto</a>
+          <a href="https://investorhamptoncrest.com" target="_blank" rel="noopener noreferrer">Acceder</a>
+        </nav>
+        <div class="footer-social" aria-label="Contacto y canales oficiales">
+          <div class="footer-social-icons">
+            <a href="mailto:hamptoncrestcapital@gmail.com" aria-label="Correo electrónico de Hampton Crest Capital">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
+            </a>
+            <a href="tel:+12397910966" aria-label="Teléfono de Hampton Crest Capital">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="2.8" width="9" height="18.4" rx="2.2"/><path d="M10.8 5.5h2.4M11.3 18h1.4"/></svg>
+            </a>
             <a href="https://www.facebook.com/share/18f43eLCCe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Hampton Crest Capital">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v2H6v4h3v5h4v-5h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg>
             </a>
@@ -631,10 +644,6 @@ const Components = {
               <svg class="youtube-icon" viewBox="0 0 24 24" aria-hidden="true"><path class="youtube-frame" d="M21 8.4a3 3 0 0 0-2.1-2.1C17 5.8 12 5.8 12 5.8s-5 0-6.9.5A3 3 0 0 0 3 8.4 29.6 29.6 0 0 0 2.5 12a29.6 29.6 0 0 0 .5 3.6 3 3 0 0 0 2.1 2.1c1.9.5 6.9.5 6.9.5s5 0 6.9-.5a3 3 0 0 0 2.1-2.1 29.6 29.6 0 0 0 .5-3.6 29.6 29.6 0 0 0-.5-3.6z"/><path class="youtube-play" d="M10.2 8.9v6.2l5.4-3.1-5.4-3.1z"/></svg>
             </a>
           </div>
-        </div>
-        <div class="footer-contact-mini">
-          <span>Correo electrónico</span>
-          <a href="mailto:hamptoncrestcapital@gmail.com">hamptoncrestcapital@gmail.com</a>
         </div>
       </div>
       <div class="footer-disclaimer">
