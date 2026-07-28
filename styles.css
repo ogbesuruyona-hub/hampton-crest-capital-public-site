@@ -3062,6 +3062,248 @@ footer { padding: 36px 0 16px; color: rgba(255,255,255,.55); background: #04111b
   }
 }
 
+/* Strategy option D: featured institutional card with alternating support cards. */
+.strategy-philosophy-grid {
+  grid-template-columns: minmax(0, 1.16fr) repeat(2, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.strategy-philosophy-grid .strategy-principle-card {
+  min-height: 272px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 38px;
+  border: 1px solid rgba(19, 32, 42, .12);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .98), rgba(246, 242, 234, .93)),
+    var(--paper);
+  box-shadow: 0 20px 46px rgba(7, 22, 35, .07);
+}
+
+.strategy-philosophy-grid .strategy-principle-card::before {
+  inset: 0;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  border: 0;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, .94), rgba(255, 255, 255, .7) 54%, rgba(246, 242, 234, .44)),
+    radial-gradient(circle at 84% 22%, rgba(212, 178, 106, .13), transparent 34%);
+}
+
+.strategy-philosophy-grid .strategy-principle-card::after {
+  inset: 0;
+  z-index: 1;
+  opacity: .86;
+}
+
+.strategy-philosophy-grid .strategy-principle-card .icon-wrap {
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 2;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 54px;
+  color: var(--gold);
+  border: 1px solid rgba(198, 169, 106, .45);
+  border-radius: 0;
+  background: rgba(255, 255, 255, .54);
+  box-shadow: none;
+}
+
+.strategy-philosophy-grid .strategy-principle-card h3,
+.strategy-philosophy-grid .strategy-principle-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.strategy-philosophy-grid .strategy-principle-card h3 {
+  max-width: 420px;
+  margin: 0 0 14px;
+  color: var(--navy);
+  font: 650 clamp(25px, 2.3vw, 34px)/1.08 "Manrope", sans-serif;
+  letter-spacing: -.055em;
+}
+
+.strategy-philosophy-grid .strategy-principle-card h3::after {
+  width: 36px;
+  margin-top: 15px;
+}
+
+.strategy-philosophy-grid .strategy-principle-card p {
+  max-width: 440px;
+  color: rgba(70, 85, 94, .9);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5) {
+  order: 1;
+  grid-row: span 2;
+  min-height: 580px;
+  color: #fff;
+  border-color: rgba(212, 178, 106, .58);
+  background:
+    linear-gradient(150deg, rgba(5, 18, 31, .98), rgba(8, 31, 49, .94)),
+    var(--navy);
+  box-shadow: 0 30px 76px rgba(7, 22, 35, .22);
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5)::before,
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8)::before {
+  background:
+    linear-gradient(160deg, rgba(5, 18, 31, .46), rgba(5, 18, 31, .9)),
+    radial-gradient(circle at 22% 18%, rgba(212, 178, 106, .18), transparent 32%);
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5)::after,
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8)::after {
+  opacity: .92;
+  mix-blend-mode: screen;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5) .icon-wrap,
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8) .icon-wrap {
+  color: var(--gold-light);
+  border-color: rgba(225, 189, 112, .58);
+  background: rgba(255, 255, 255, .035);
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5) h3,
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8) h3 {
+  color: #fff;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(5) p,
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8) p {
+  color: rgba(255, 255, 255, .72);
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(6) {
+  order: 2;
+  grid-column: span 2;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(3) {
+  order: 3;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(8) {
+  order: 4;
+  color: #fff;
+  border-color: rgba(212, 178, 106, .36);
+  background:
+    linear-gradient(150deg, rgba(5, 18, 31, .98), rgba(8, 31, 49, .94)),
+    var(--navy);
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(1) {
+  order: 5;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(2) {
+  order: 6;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(4) {
+  order: 7;
+}
+
+.strategy-philosophy-grid .strategy-principle-card:nth-child(7) {
+  order: 8;
+}
+
+.strategy-philosophy-grid .visual-shield::after {
+  background:
+    radial-gradient(ellipse at 76% 38%, rgba(225, 189, 112, .08) 0 22%, transparent 23%),
+    radial-gradient(circle at 73% 43%, transparent 0 23%, rgba(225, 189, 112, .11) 24% 24.8%, transparent 25.5%),
+    linear-gradient(90deg, transparent 0 71%, rgba(255, 255, 255, .08) 71.5%, transparent 72.2%),
+    linear-gradient(145deg, transparent 0 66%, rgba(225, 189, 112, .08) 67%, transparent 68%);
+}
+
+.strategy-philosophy-grid .visual-data::after {
+  background:
+    linear-gradient(rgba(7, 22, 35, .04), rgba(7, 22, 35, .04)) 70% 74% / 26px 72px no-repeat,
+    linear-gradient(rgba(7, 22, 35, .035), rgba(7, 22, 35, .035)) 80% 74% / 26px 116px no-repeat,
+    linear-gradient(rgba(7, 22, 35, .027), rgba(7, 22, 35, .027)) 90% 74% / 26px 64px no-repeat,
+    linear-gradient(145deg, transparent 0 66%, rgba(212, 178, 106, .07) 67%, transparent 68%),
+    repeating-linear-gradient(0deg, transparent 0 46px, rgba(7, 22, 35, .014) 47px 48px),
+    repeating-linear-gradient(90deg, transparent 0 62px, rgba(7, 22, 35, .012) 63px 64px);
+}
+
+.strategy-philosophy-grid .visual-risk::after {
+  background:
+    radial-gradient(circle at 80% 46%, transparent 0 24%, rgba(7, 22, 35, .038) 25% 25.8%, transparent 26.5%),
+    radial-gradient(circle at 80% 46%, transparent 0 40%, rgba(7, 22, 35, .032) 41% 41.8%, transparent 42.5%),
+    conic-gradient(from 32deg at 80% 46%, rgba(212, 178, 106, .09), transparent 0 14%, rgba(7, 22, 35, .034) 15%, transparent 22% 100%),
+    linear-gradient(34deg, transparent 0 63%, rgba(7, 22, 35, .034) 64%, transparent 65%);
+}
+
+.strategy-philosophy-grid .visual-horizon::after {
+  background:
+    linear-gradient(150deg, transparent 0 60%, rgba(212, 178, 106, .075) 61%, transparent 62%),
+    radial-gradient(circle at 77% 29%, rgba(212, 178, 106, .11), transparent 0 5%, transparent 6%),
+    radial-gradient(ellipse at 58% 92%, rgba(7, 22, 35, .034), transparent 36%),
+    repeating-linear-gradient(90deg, transparent 0 78px, rgba(7, 22, 35, .013) 79px 80px);
+}
+
+.strategy-philosophy-grid .visual-discipline::after {
+  background:
+    linear-gradient(rgba(212, 178, 106, .1), rgba(212, 178, 106, .1)) 78% 30% / 82px 1px no-repeat,
+    linear-gradient(rgba(7, 22, 35, .04), rgba(7, 22, 35, .04)) 78% 43% / 126px 1px no-repeat,
+    linear-gradient(rgba(7, 22, 35, .03), rgba(7, 22, 35, .03)) 78% 56% / 104px 1px no-repeat,
+    radial-gradient(ellipse at 76% 46%, rgba(7, 22, 35, .03), transparent 38%);
+}
+
+.strategy-philosophy-grid .visual-compound::after {
+  background:
+    radial-gradient(circle at 40% 72%, rgba(7, 22, 35, .04) 0 3px, transparent 4px),
+    radial-gradient(circle at 58% 56%, rgba(212, 178, 106, .08) 0 4px, transparent 5px),
+    radial-gradient(circle at 78% 34%, rgba(212, 178, 106, .11) 0 5px, transparent 6px),
+    linear-gradient(150deg, transparent 0 58%, rgba(212, 178, 106, .075) 59%, transparent 60%),
+    radial-gradient(circle at 76% 46%, transparent 0 40%, rgba(7, 22, 35, .031) 41%, transparent 42%);
+}
+
+@media (max-width: 980px) {
+  .strategy-philosophy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card:nth-child(5),
+  .strategy-philosophy-grid .strategy-principle-card:nth-child(6) {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card,
+  .strategy-philosophy-grid .strategy-principle-card:nth-child(5),
+  .strategy-philosophy-grid .strategy-principle-card:nth-child(6) {
+    grid-column: auto;
+    min-height: 285px;
+    padding: 30px 26px;
+  }
+
+  .strategy-philosophy-grid .strategy-principle-card .icon-wrap {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 44px;
+  }
+}
+
 /* Footer option C: centered, compact and institutional. */
 footer {
   padding: 58px 0 20px;
