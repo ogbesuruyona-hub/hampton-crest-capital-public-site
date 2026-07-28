@@ -3407,3 +3407,76 @@ footer .footer-social-links a:focus-visible::after {
     height: 16px;
   }
 }
+
+/* Compact footer contact row: email and phone live with the icon links. */
+footer {
+  padding-top: 48px;
+}
+
+footer .footer-main {
+  gap: 18px;
+  padding-bottom: 22px;
+}
+
+footer .footer-main > .footer-column:not(.footer-contact) {
+  max-width: 850px;
+}
+
+footer .footer-main > .footer-column:not(.footer-contact) a {
+  padding: 0 14px;
+}
+
+footer .footer-contact {
+  max-width: 360px;
+}
+
+footer .footer-contact .footer-social-block {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-contact .footer-social-links {
+  justify-content: center;
+  gap: 6px;
+}
+
+footer .footer-social-links a[href^="mailto:"] {
+  --social-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3.5' y='5.5' width='17' height='13' rx='2'/%3E%3Cpath d='m4.5 7 7.5 6 7.5-6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+footer .footer-social-links a[href^="tel:"] {
+  --social-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='7.5' y='2.8' width='9' height='18.4' rx='2.2'/%3E%3Cpath d='M10.8 5.5h2.4M11.3 18h1.4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+footer .footer-social-links a[href^="mailto:"]::before,
+footer .footer-social-links a[href^="tel:"]::before {
+  content: "";
+  font-size: 0;
+}
+
+@media (max-width: 760px) {
+  footer {
+    padding-top: 40px;
+  }
+
+  footer .footer-main {
+    gap: 16px;
+  }
+
+  footer .footer-main > .footer-column:not(.footer-contact) {
+    max-width: 360px;
+  }
+
+  footer .footer-main > .footer-column:not(.footer-contact) a {
+    padding: 0 8px;
+  }
+
+  footer .footer-contact {
+    max-width: 100%;
+  }
+
+  footer .footer-contact .footer-social-links {
+    gap: 4px;
+  }
+}
