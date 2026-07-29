@@ -933,3 +933,17 @@ th { color: var(--muted); background: var(--cream); font-size: .57rem; letter-sp
     font-size: .62rem;
   }
 }
+
+/* Final footer cleanup for the Investor Center: no duplicate quick links. */
+.site-footer .footer-nav {
+  display: none;
+}
+
+.site-footer .footer-top {
+  gap: 16px;
+}
+
+.site-footer .footer-phone-symbol {
+  display: inline-block;
+  font: 400 18px/1 "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}

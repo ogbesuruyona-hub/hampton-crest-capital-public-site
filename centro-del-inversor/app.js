@@ -615,21 +615,13 @@ const Components = {
     <footer class="site-footer ${academy ? "academy-site-footer" : ""}">
       <div class="footer-top">
         <a class="brand footer-brand ${academy ? "academy-footer-brand" : ""}" href="/" data-link>${Components.Logo()}</a>
-        <nav class="footer-nav" aria-label="Explorar">
-          <a href="/" data-link>Inicio</a>
-          <a href="/academia" data-link>Academia gratuita</a>
-          <a href="/analisis" data-link>Análisis</a>
-          <a href="/academia/libros" data-link>Libros</a>
-          <a href="/contacto" data-link>Contacto</a>
-          <a href="https://investorhamptoncrest.com" target="_blank" rel="noopener noreferrer">Acceder</a>
-        </nav>
         <div class="footer-social" aria-label="Contacto y canales oficiales">
           <div class="footer-social-icons">
             <a href="mailto:hamptoncrestcapital@gmail.com" aria-label="Correo electrónico de Hampton Crest Capital">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
             </a>
             <a href="tel:+12397910966" aria-label="Teléfono de Hampton Crest Capital">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="2.8" width="9" height="18.4" rx="2.2"/><path d="M10.8 5.5h2.4M11.3 18h1.4"/></svg>
+              <span aria-hidden="true" class="footer-phone-symbol">📞</span>
             </a>
             <a href="https://www.facebook.com/share/18f43eLCCe/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Hampton Crest Capital">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v2H6v4h3v5h4v-5h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg>
