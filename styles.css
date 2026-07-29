@@ -3985,3 +3985,335 @@ footer .footer-social-links a[href^="mailto:"]::before {
     repeating-linear-gradient(0deg, transparent 0 44px, rgba(255,255,255,.035) 45px 46px),
     repeating-linear-gradient(90deg, transparent 0 56px, rgba(255,255,255,.026) 57px 58px);
 }
+
+/* Strategy final editorial model: dark institutional rows, no decorative gradient curve. */
+.strategy-editorial-section,
+.strategy-operating-section {
+  color: #f7f0e2;
+  background:
+    radial-gradient(circle at 78% 16%, rgba(216,189,120,.075), transparent 36%),
+    linear-gradient(180deg, #061421 0%, #04111b 100%);
+}
+
+.strategy-editorial-section .split-heading {
+  align-items: start;
+  margin: 0;
+  color: #f7f0e2;
+}
+
+.strategy-editorial-section .eyebrow,
+.strategy-editorial-section .eyebrow span,
+.strategy-operating-section .eyebrow,
+.strategy-operating-section .eyebrow span {
+  color: rgba(216,189,120,.9);
+}
+
+.strategy-editorial-section h2,
+.strategy-operating-section h2 {
+  color: #f7f0e2;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+}
+
+.strategy-editorial-section h2 em,
+.strategy-operating-section h2 em {
+  color: var(--gold-bright);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.strategy-editorial-section .lead,
+.strategy-operating-section .strategy-top > p {
+  color: rgba(247,240,226,.66);
+}
+
+.strategy-editorial-section .strategy-option-grid {
+  display: block;
+  margin-top: 68px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+  position: relative;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 130px minmax(220px, 310px) minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  padding: 28px 0;
+  color: #f7f0e2;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.105);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:first-child {
+  padding-top: 30px;
+  background: linear-gradient(90deg, rgba(255,255,255,.026), transparent 72%);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:last-child {
+  border-bottom: 0;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::before {
+  position: static;
+  z-index: 1;
+  width: auto;
+  height: auto;
+  white-space: pre-line;
+  color: var(--gold-bright);
+  border: 0;
+  background: none;
+  font: 700 10px/1.8 "Manrope", sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card::before {
+  content: "I\A Principio rector";
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card::before {
+  content: "II\A Análisis";
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-support-card::before {
+  content: "III\A Horizonte";
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card::before {
+  content: "IV\A Supervisión";
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::after,
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card .icon-wrap {
+  display: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card > div:not(.icon-wrap) {
+  display: contents;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card h3 {
+  margin: 0;
+  color: #f7f0e2;
+  font: 400 clamp(24px, 2.5vw, 32px)/1.1 Georgia, "Times New Roman", serif;
+  letter-spacing: -.035em;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card h3::after {
+  display: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card p {
+  max-width: 560px;
+  margin: 0;
+  color: rgba(247,240,226,.66);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.strategy-operating-section {
+  padding-top: 92px;
+}
+
+.strategy-operating-section .strategy-top {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  margin: 0;
+}
+
+.strategy-operating-section .strategy-top h2 {
+  margin-top: 14px;
+}
+
+.strategy-operating-section .strategy-top > p {
+  display: none;
+}
+
+.strategy-operating-section .strategy-process {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  margin-top: 44px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.028), transparent 46%, rgba(255,255,255,.025)),
+    rgba(8,27,43,.86);
+  box-shadow: none;
+}
+
+.strategy-operating-section .process-block {
+  display: block;
+  padding: 46px 48px;
+  border: 0;
+  background: transparent;
+}
+
+.strategy-operating-section .process-block:first-child {
+  border-right: 1px solid rgba(255,255,255,.1);
+  background: rgba(4,16,26,.2);
+}
+
+.strategy-operating-section .process-heading {
+  display: block;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.strategy-operating-section .process-heading::before {
+  display: none;
+}
+
+.strategy-operating-section .process-heading span,
+.strategy-operating-section .strategy-label {
+  color: var(--gold-bright);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.strategy-operating-section .process-heading h3 {
+  margin: 10px 0 0;
+  color: #f7f0e2;
+  font: 400 clamp(31px, 3.3vw, 48px)/1.05 Georgia, "Times New Roman", serif;
+  letter-spacing: -.04em;
+}
+
+.strategy-operating-section .process-cards,
+.strategy-operating-section .process-cards-single {
+  display: block;
+  max-width: none;
+}
+
+.strategy-operating-section .process-card {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  padding: 21px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.095);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.strategy-operating-section .process-card:last-child {
+  border-bottom: 0;
+}
+
+.strategy-operating-section .process-card::before,
+.strategy-operating-section .process-card::after,
+.strategy-operating-section .process-card-icon,
+.strategy-operating-section .process-divider {
+  display: none;
+}
+
+.strategy-operating-section .process-card h4 {
+  margin: 0 0 8px;
+  color: #f7f0e2;
+  font: 700 13px/1.25 "Manrope", sans-serif;
+  letter-spacing: 0;
+}
+
+.strategy-operating-section .process-card p {
+  max-width: none;
+  margin: 0;
+  color: rgba(247,240,226,.64);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.strategy-operating-section .strategy-label {
+  min-width: 70px;
+  text-align: right;
+}
+
+.strategy-operating-section .strategy-label::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  margin: 0 10px 3px 0;
+  background: rgba(216,189,120,.72);
+}
+
+@media (max-width: 980px) {
+  .strategy-editorial-section .split-heading,
+  .strategy-operating-section .strategy-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+    grid-template-columns: 105px minmax(190px, 270px) minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .strategy-operating-section .strategy-process {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-operating-section .process-block:first-child {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-editorial-section,
+  .strategy-operating-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid {
+    margin-top: 42px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 26px 0;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card::before {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card p {
+    font-size: 12px;
+  }
+
+  .strategy-operating-section .strategy-process {
+    margin-top: 34px;
+  }
+
+  .strategy-operating-section .process-block {
+    padding: 32px 24px;
+  }
+
+  .strategy-operating-section .process-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .strategy-operating-section .strategy-label {
+    text-align: left;
+  }
+}
