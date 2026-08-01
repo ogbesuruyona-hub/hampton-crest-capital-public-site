@@ -4317,3 +4317,404 @@ footer .footer-social-links a[href^="mailto:"]::before {
     text-align: left;
   }
 }
+
+/* Preview polish: strategy philosophy as an executive decision board. */
+.strategy-editorial-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(216,189,120,.1), transparent 31%),
+    radial-gradient(circle at 8% 72%, rgba(255,255,255,.035), transparent 28%),
+    linear-gradient(180deg, #061421 0%, #04111b 100%);
+}
+
+.strategy-editorial-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .34;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 92px 92px;
+  mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 78%, transparent 100%);
+}
+
+.strategy-editorial-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.strategy-editorial-section .split-heading {
+  display: grid;
+  grid-template-columns: minmax(280px, .85fr) minmax(360px, .95fr);
+  gap: clamp(44px, 8vw, 130px);
+  align-items: end;
+}
+
+.strategy-editorial-section .split-heading h2 {
+  margin-top: 16px;
+  letter-spacing: -.075em;
+}
+
+.strategy-editorial-section .heading-copy {
+  padding: 26px 30px;
+  border: 1px solid rgba(216,189,120,.18);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.055), rgba(255,255,255,.015)),
+    rgba(255,255,255,.018);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.strategy-editorial-section .heading-copy .lead {
+  max-width: 620px;
+  color: rgba(247,240,226,.72);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.strategy-editorial-section .strategy-option-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 54px;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 168px minmax(210px, 330px) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 58px);
+  align-items: center;
+  padding: 28px 34px;
+  border: 1px solid rgba(216,189,120,.14);
+  border-radius: 14px;
+  background:
+    linear-gradient(110deg, rgba(255,255,255,.07), rgba(255,255,255,.022) 55%, rgba(216,189,120,.035)),
+    rgba(255,255,255,.018);
+  box-shadow: 0 18px 48px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.055);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+.strategy-editorial-section .strategy-option-grid .strategy-support-card,
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+  grid-column: auto;
+  grid-row: auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 168px minmax(210px, 330px) minmax(0, 1fr);
+  align-items: center;
+  padding: 28px 34px;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(216,189,120,.36);
+  background:
+    linear-gradient(110deg, rgba(255,255,255,.088), rgba(255,255,255,.026) 55%, rgba(216,189,120,.05)),
+    rgba(255,255,255,.022);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:first-child {
+  padding-top: 28px;
+  background:
+    linear-gradient(110deg, rgba(216,189,120,.09), rgba(255,255,255,.026) 44%, rgba(255,255,255,.018)),
+    rgba(255,255,255,.018);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+  color: #f7f0e2;
+  background:
+    linear-gradient(110deg, rgba(216,189,120,.09), rgba(255,255,255,.026) 44%, rgba(255,255,255,.018)),
+    rgba(255,255,255,.018);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::before {
+  width: auto;
+  color: rgba(216,189,120,.95);
+  font: 800 9px/1.8 "Manrope", sans-serif;
+  letter-spacing: .2em;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 32%;
+  opacity: .42;
+  background:
+    radial-gradient(circle at 76% 50%, transparent 0 32%, rgba(216,189,120,.13) 33% 34%, transparent 35%),
+    linear-gradient(120deg, transparent 0 62%, rgba(255,255,255,.05) 63%, transparent 64%);
+  pointer-events: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card .icon-wrap {
+  display: none;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card > div:not(.icon-wrap) {
+  display: contents;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card h3 {
+  margin: 0;
+  color: #f8f1e4;
+  font: 400 clamp(24px, 2.2vw, 34px)/1.05 Georgia, "Times New Roman", serif;
+  letter-spacing: -.04em;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card h3::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin-top: 15px;
+  background: rgba(216,189,120,.8);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card p {
+  max-width: 690px;
+  color: rgba(247,240,226,.74);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card p,
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card p {
+  color: rgba(247,240,226,.74);
+}
+
+@media (max-width: 980px) {
+  .strategy-editorial-section .split-heading {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .strategy-editorial-section .heading-copy {
+    padding: 22px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+    grid-template-columns: 138px minmax(190px, 290px) minmax(0, 1fr);
+    gap: 24px;
+    padding: 26px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-support-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+    grid-template-columns: 138px minmax(190px, 290px) minmax(0, 1fr);
+    padding: 26px;
+  }
+}
+
+@media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .subpage-hero-content h1,
+  .subpage-hero-content p {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .subpage-hero-content h1 {
+    font-size: clamp(56px, 17vw, 72px);
+  }
+
+  .strategy-editorial-section .split-heading,
+  .strategy-editorial-section .heading-copy,
+  .strategy-editorial-section .strategy-option-grid,
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .strategy-editorial-section .heading-copy {
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .strategy-editorial-section .heading-copy .lead,
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card p,
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card h3 {
+    max-width: min(100%, calc(100vw - 80px));
+    min-width: 0;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .strategy-editorial-section .strategy-option-grid {
+    gap: 10px;
+    margin-top: 36px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding: 24px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-support-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card::after {
+    width: 55%;
+    opacity: .25;
+  }
+}
+
+/* Preview variant: compact philosophy cards instead of long horizontal bars. */
+.strategy-editorial-section .strategy-option-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 58px;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card,
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+.strategy-editorial-section .strategy-option-grid .strategy-support-card,
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+  grid-template-columns: 1fr;
+  align-content: end;
+  gap: 18px;
+  min-height: 285px;
+  padding: 34px;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::before {
+  align-self: start;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card::after {
+  width: 58%;
+  opacity: .34;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card h3 {
+  max-width: 420px;
+  font-size: clamp(28px, 2.3vw, 38px);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card p {
+  max-width: 520px;
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+.strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+  background:
+    linear-gradient(140deg, rgba(216,189,120,.11), rgba(255,255,255,.026) 42%, rgba(255,255,255,.016)),
+    rgba(255,255,255,.018);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+.strategy-editorial-section .strategy-option-grid .strategy-support-card {
+  background:
+    linear-gradient(140deg, rgba(255,255,255,.07), rgba(255,255,255,.024) 48%, rgba(216,189,120,.03)),
+    rgba(255,255,255,.018);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:nth-child(1)::after {
+  background:
+    radial-gradient(circle at 76% 38%, transparent 0 29%, rgba(216,189,120,.13) 30% 31%, transparent 32%),
+    linear-gradient(135deg, transparent 0 62%, rgba(255,255,255,.052) 63%, transparent 64%);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:nth-child(2)::after {
+  background:
+    linear-gradient(rgba(216,189,120,.12), rgba(216,189,120,.12)) 78% 78% / 24px 82px no-repeat,
+    linear-gradient(rgba(255,255,255,.07), rgba(255,255,255,.07)) 86% 78% / 24px 124px no-repeat,
+    linear-gradient(rgba(255,255,255,.045), rgba(255,255,255,.045)) 94% 78% / 24px 68px no-repeat,
+    repeating-linear-gradient(0deg, transparent 0 44px, rgba(255,255,255,.035) 45px 46px);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:nth-child(3)::after {
+  background:
+    radial-gradient(ellipse at 78% 84%, rgba(216,189,120,.11), transparent 34%),
+    linear-gradient(145deg, transparent 0 63%, rgba(216,189,120,.12) 64%, transparent 65%);
+}
+
+.strategy-editorial-section .strategy-option-grid .strategy-principle-card:nth-child(4)::after {
+  background:
+    conic-gradient(from 30deg at 78% 45%, rgba(216,189,120,.15), transparent 0 16%, rgba(255,255,255,.075) 17%, transparent 28% 100%),
+    radial-gradient(circle at 78% 45%, transparent 0 25%, rgba(216,189,120,.11) 26% 27%, transparent 28%, transparent 42%, rgba(255,255,255,.07) 43% 44%, transparent 45%);
+}
+
+@media (max-width: 980px) {
+  .strategy-editorial-section .strategy-option-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-support-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+    grid-template-columns: 1fr;
+    min-height: 260px;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .strategy-editorial-section .strategy-option-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 38px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-feature-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-wide-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-support-card,
+  .strategy-editorial-section .strategy-option-grid .strategy-risk-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 235px;
+    padding: 24px;
+    overflow: hidden;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card h3 {
+    width: 100%;
+    max-width: min(100%, calc(100vw - 80px));
+    min-width: 0;
+    font-size: clamp(24px, 7.2vw, 30px);
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .strategy-editorial-section .strategy-option-grid .strategy-principle-card p {
+    width: 100%;
+    max-width: min(100%, calc(100vw - 80px));
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .strategy-editorial-section .heading-copy .lead {
+    max-width: min(100%, calc(100vw - 72px));
+  }
+}
