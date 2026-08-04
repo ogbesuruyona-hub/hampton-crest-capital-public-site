@@ -223,7 +223,7 @@ button { font: inherit; }
 @media (min-width: 1500px) {
   .nav-shell,
   .hero-content {
-    width: min(calc(100% - 144px), 1540px);
+    width: min(calc(100% - 96px), 1640px);
   }
 }
 
