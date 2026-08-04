@@ -219,6 +219,14 @@ button { font: inherit; }
     linear-gradient(0deg, rgba(4,16,27,.74), transparent 45%);
 }
 .hero-content { position: relative; z-index: 3; padding-top: 65px; }
+
+@media (min-width: 1500px) {
+  .nav-shell,
+  .hero-content {
+    width: min(calc(100% - 144px), 1540px);
+  }
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
