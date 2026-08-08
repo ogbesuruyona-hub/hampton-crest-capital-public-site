@@ -604,7 +604,7 @@ const Components = {
         <a href="/analisis" data-link>Análisis</a>
         <a href="/academia/libros" data-link>Libros</a>
         <a href="/contacto" data-link>Contacto</a>
-        ${AuthProvider.user ? `<a href="/watchlists" data-link>Watchlists</a>` : ""}
+        ${AuthProvider.user ? `<a href="/watchlists" data-link>Listas</a>` : ""}
         ${AuthProvider.user ? `<a href="/mi-progreso" data-link>Mi progreso</a>` : ""}
         ${AuthProvider.profile?.role === "admin" ? `<a href="/admin" data-link>Admin</a>` : ""}
         ${Components.UserMenu()}
@@ -657,7 +657,7 @@ const Components = {
           <small>${escapeHtml(AuthProvider.user.email || "")}</small>
           <small>Rol: ${escapeHtml(AuthProvider.profile?.role || "viewer")}</small>
           <a href="/analisis" data-link>Centro de Análisis</a>
-          <a href="/watchlists" data-link>Mis Watchlists</a>
+          <a href="/watchlists" data-link>Mis listas</a>
           <a href="/mi-progreso" data-link>Mi progreso</a>
           ${AuthProvider.profile?.role === "admin" ? `<a href="/admin" data-link>Administración</a>` : ""}
           <button id="logoutButton">Cerrar sesión</button>
@@ -784,7 +784,7 @@ const Pages = {
             <h2>Bienvenido al Centro de Análisis</h2>
             <div class="profile-list">
               <div><span>Nombre</span><strong>${escapeHtml(fullName)}</strong></div>
-              <div><span>Email</span><strong>${escapeHtml(user.email || "—")}</strong></div>
+              <div><span>Correo electr&oacute;nico</span><strong>${escapeHtml(user.email || "—")}</strong></div>
               <div><span>Rol</span><strong>${escapeHtml(profile.role || "viewer")}</strong></div>
             </div>
           </article>
@@ -812,24 +812,24 @@ const Pages = {
   },
 
   Watchlists: () => `
-    <div class="page">${Components.PageHero({ eyebrow: "Watchlists", title: "My Watchlists", text: "Organice acciones para seguimiento educativo personal, sin señales de operación ni recomendaciones." })}
+    <div class="page">${Components.PageHero({ eyebrow: "Listas de seguimiento", title: "Mis listas", text: "Organice acciones para seguimiento educativo personal, sin señales de operación ni recomendaciones." })}
     ${Components.Section({ content: `
       <div class="watchlist-shell">
         <aside class="panel watchlist-sidebar">
-          <span class="eyebrow">Crear watchlist</span>
+          <span class="eyebrow">Crear lista</span>
           <h2 class="serif">Nuevo grupo de seguimiento</h2>
           <form class="form-stack" id="createWatchlistForm">
             <div class="form-field"><label for="watchlistName">Nombre</label><input id="watchlistName" name="name" required placeholder="Ej. Tecnología de calidad"></div>
-            <button class="button button-ink">Crear watchlist</button>
+            <button class="button button-ink">Crear lista</button>
           </form>
           <div class="watchlist-summary" id="watchlistSummary"><p class="muted">Cargando resumen…</p></div>
         </aside>
         <section class="watchlist-main">
           <div class="panel-heading-row">
-            <div><span class="eyebrow">Mis Watchlists</span><h2 class="serif">Listas guardadas</h2></div>
+            <div><span class="eyebrow">Mis listas</span><h2 class="serif">Listas guardadas</h2></div>
             <a class="button button-outline" href="/analisis" data-link>Analizar ticker</a>
           </div>
-          <div id="watchlistsContainer" class="watchlist-grid"><div class="empty-state"><h3>Cargando watchlists</h3><p class="muted">Consultando sus listas personales…</p></div></div>
+          <div id="watchlistsContainer" class="watchlist-grid"><div class="empty-state"><h3>Cargando listas</h3><p class="muted">Consultando sus listas personales…</p></div></div>
         </section>
       </div>
       ${Components.DisclaimerBlock({ compact: true })}`, tone: "cream" })}</div>`,
@@ -1043,7 +1043,7 @@ function pageTitle(route) {
     "/academia/leccion": "Lección",
     "/mi-progreso": "Mi progreso",
     "/analisis": "Centro de análisis",
-    "/watchlists": "Watchlists",
+    "/watchlists": "Listas de seguimiento",
     "/contacto": "Contacto",
     "/auth": "Acceso",
     "/admin": "Administración",
@@ -1366,7 +1366,7 @@ async function bindWatchlistPicker(stock) {
   button.addEventListener("click", async () => {
     picker.classList.toggle("hidden");
     if (picker.classList.contains("hidden")) return;
-    picker.innerHTML = `<div class="status-message">Cargando watchlists…</div>`;
+    picker.innerHTML = `<div class="status-message">Cargando listas…</div>`;
     try {
       const watchlists = await DataStore.getWatchlists();
       picker.innerHTML = `
@@ -1418,7 +1418,7 @@ async function renderPersonalDashboard() {
       <h2 class="serif">Seguimiento educativo</h2>
       <div class="mini-stat-grid">
         <div><strong>${dashboard.searches.length}</strong><span>Búsquedas recientes</span></div>
-        <div><strong>${dashboard.watchlists.length}</strong><span>Watchlists</span></div>
+        <div><strong>${dashboard.watchlists.length}</strong><span>Listas</span></div>
         <div><strong>${dashboard.savedStocks}</strong><span>Acciones guardadas</span></div>
       </div>
       <div class="dashboard-mini-list">
@@ -1427,7 +1427,7 @@ async function renderPersonalDashboard() {
       </div>
       <div class="dashboard-mini-list">
         <h3>My watchlists</h3>
-        ${dashboard.watchlists.length ? dashboard.watchlists.slice(0, 4).map(item => `<a href="/watchlists" data-link><strong>${escapeHtml(item.name)}</strong><span>${item.watchlist_items.length} acciones</span></a>`).join("") : `<p class="muted">Cree su primera watchlist desde un análisis.</p>`}
+        ${dashboard.watchlists.length ? dashboard.watchlists.slice(0, 4).map(item => `<a href="/watchlists" data-link><strong>${escapeHtml(item.name)}</strong><span>${item.watchlist_items.length} acciones</span></a>`).join("") : `<p class="muted">Cree su primera lista desde un análisis.</p>`}
       </div>`;
     node.querySelectorAll("[data-link]").forEach(link => link.addEventListener("click", event => {
       event.preventDefault();
@@ -1465,7 +1465,7 @@ async function renderWatchlists() {
     const watchlists = await DataStore.getWatchlists();
     const savedStocks = watchlists.reduce((total, item) => total + item.watchlist_items.length, 0);
     if (summary) {
-      summary.innerHTML = `<div class="mini-stat-grid"><div><strong>${watchlists.length}</strong><span>Watchlists</span></div><div><strong>${savedStocks}</strong><span>Acciones</span></div></div>`;
+      summary.innerHTML = `<div class="mini-stat-grid"><div><strong>${watchlists.length}</strong><span>Listas</span></div><div><strong>${savedStocks}</strong><span>Acciones</span></div></div>`;
     }
     container.innerHTML = watchlists.length
       ? watchlists.map(watchlistCard).join("")
@@ -1739,7 +1739,7 @@ async function bindAdminBooks() {
 async function bindAdminUsers() {
   const users = await DataStore.getAdminUsers();
   document.getElementById("adminUsersList").innerHTML = users.length
-    ? `<table><thead><tr><th>Nombre</th><th>Email</th><th>Rol</th><th>Fecha</th></tr></thead><tbody>${users.map(user => `<tr><td>${escapeHtml(user.full_name || "—")}</td><td>${escapeHtml(user.email || "—")}</td><td>${escapeHtml(user.role || "viewer")}</td><td>${formatDate(user.created_at)}</td></tr>`).join("")}</tbody></table>`
+    ? `<table><thead><tr><th>Nombre</th><th>Correo electr&oacute;nico</th><th>Rol</th><th>Fecha</th></tr></thead><tbody>${users.map(user => `<tr><td>${escapeHtml(user.full_name || "—")}</td><td>${escapeHtml(user.email || "—")}</td><td>${escapeHtml(user.role || "viewer")}</td><td>${formatDate(user.created_at)}</td></tr>`).join("")}</tbody></table>`
     : `<p class="muted">No hay usuarios registrados.</p>`;
 }
 
@@ -1834,7 +1834,7 @@ async function bindAdminDashboard() {
     try {
       const users = await DataStore.getAdminUsers();
       usersNode.innerHTML = users.length
-        ? `<table><thead><tr><th>Nombre</th><th>Email</th><th>Rol</th><th>Fecha</th></tr></thead><tbody>${users.slice(0, 8).map(user => `<tr><td>${escapeHtml(user.full_name || "—")}</td><td>${escapeHtml(user.email || "—")}</td><td>${escapeHtml(user.role || "viewer")}</td><td>${formatDate(user.created_at)}</td></tr>`).join("")}</tbody></table>`
+        ? `<table><thead><tr><th>Nombre</th><th>Correo electr&oacute;nico</th><th>Rol</th><th>Fecha</th></tr></thead><tbody>${users.slice(0, 8).map(user => `<tr><td>${escapeHtml(user.full_name || "—")}</td><td>${escapeHtml(user.email || "—")}</td><td>${escapeHtml(user.role || "viewer")}</td><td>${formatDate(user.created_at)}</td></tr>`).join("")}</tbody></table>`
         : `<p class="muted">No hay usuarios registrados.</p>`;
     } catch (error) {
       usersNode.innerHTML = `<p class="muted">${escapeHtml(error.message || "No se pudieron cargar usuarios recientes.")}</p>`;
