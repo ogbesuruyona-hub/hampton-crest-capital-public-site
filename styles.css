@@ -736,6 +736,17 @@ h1 em, h2 em { color: var(--gold-bright); font-style: normal; font-weight: 400; 
   font: 500 clamp(36px, 4.6vw, 62px)/1.04 "Manrope";
   letter-spacing: -.06em;
 }
+.manager-philosophy {
+  position: relative;
+  margin: 0 0 28px;
+  padding: 18px 0 18px 24px;
+  color: rgba(19,32,42,.84);
+  border-left: 2px solid var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 1.7vw, 24px);
+  font-style: italic;
+  line-height: 1.45;
+}
 .manager-profile ul {
   display: grid;
   gap: 16px;
@@ -5001,8 +5012,14 @@ footer .footer-social-links a[href^="mailto:"]::before {
     line-height: 1.04;
   }
 
+  .manager-philosophy {
+    margin-bottom: 22px;
+    padding: 14px 0 14px 18px;
+    font-size: clamp(17px, 5vw, 21px);
+  }
+
   .manager-profile ul {
-    margin-top: 22px;
+    margin-top: 0;
   }
 
   .manager-profile li {
